@@ -78,8 +78,8 @@ shared/
   skill_05_aplus/          ✅ migrated
   skill_06_mobile/         ✅ migrated (v2.0 — 8 modules)
   skill_07_integrity/      ✅ migrated
-  skill_08_report/         ⚠️ pending migration
-  skill_09_infographic/    ⚠️ pending migration
+  skill_08_report/         ✅ present
+  skill_09_infographic/    ✅ present
   utils/
 ```
 

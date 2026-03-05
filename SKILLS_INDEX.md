@@ -23,8 +23,8 @@ Each skill implements a class with:
 | 05 | A+ Knowledge Base Engineering | Comparison table + Modules | Hallucination risk score, A+ recommendations | ✅ Ready |
 | 06 | Mobile Habitat Optimization **v2.0** | Title + Bullets + Images + Modules + Videos | 8-module mobile audit — 2× weight in Amazon algo | ✅ Ready |
 | 07 | Semantic Integrity & Anti-Optimization Check | Title + Bullets + Backend | Compliance report, sanitized listing, integrity score | ✅ Ready |
-| 08 | Visual HTML Report Generator | Full pipeline JSON | Styled HTML report with educational sections | ⚠️ Pending migration |
-| 09 | OCR-Optimized Infographic Generator | Pipeline JSON + ASIN | 4 infographic types (specs, features, comparison, lifestyle) | ⚠️ Pending migration |
+| 08 | Visual HTML Report Generator | Full pipeline JSON | Styled HTML report with educational sections | ✅ Ready |
+| 09 | OCR-Optimized Infographic Generator | Pipeline JSON + ASIN | 4 infographic types (specs, features, comparison, lifestyle) | ✅ Ready |
 
 > **Skill 06 v2.0** covers 8 mobile modules: title truncation, bullet truncation,
 > image order, swipe depth, A+ fold, touch targets, voice readiness, video arc.
