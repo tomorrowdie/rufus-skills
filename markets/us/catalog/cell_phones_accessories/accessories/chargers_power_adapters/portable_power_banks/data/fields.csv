@@ -1,0 +1,215 @@
+label,field_name,section,max_count,required,accepted_values,example,definition
+Product Type,feed_product_type,Basic,1,Required,Input an appropriate product type.,ConsumerElectronics,Within a category there are often multiple product types defined.  Selet a product type from the drop down on the template tab or the a value from the valid values tab.
+Seller SKU,item_sku,Basic,1,Required,Unique Identifier.,101MyCollectible1,"A unique identifier for the product, assigned by the merchant.  The SKU must be unique for each product listed.  After you have established a SKU for a product, please do not change it without first deleting the original SKU from our systems through a delete feed."
+Brand,brand_name,Basic,1,Required,An alphanumeric string; 1 character minimum in length and 50 characters maximum in length.,Lenovo,"The brand of the product.  By populating this field, your brand name will be displayed on the Amazon.com site. If you are not listing a branded product please populate ‘Generic’ in this field."
+Update Delete,update_delete,Basic,1,Preferred,"Select one of the following options: Update, PartialUpdate, or Delete.","Update, PartialUpdate, Delete","Specifies the type of operation (Update, PartialUpdate or Delete) to be done on the data provided. If left blank, the default behavior is ""Update.""  
+
+Use ""Update"" to reload all fields.  All fields are required when using update. When uploading an Update existing data will be overridden.
+
+Use ""PartialUpdate""  when you want to update only a few specified fields in your file. Only include the SKU(s) and the fields you want to update.  
+
+Use ""Delete"" when you wish to remove a product completely and permanently from the catalog."
+GTIN Exemption Reason,gtin_exemption_reason,Basic,1,Optional,Reason for getting an exemption from having an unique identifier for an item.,"bundle, part,pre_order",Reason for getting an exemption from having an unique identifier for an item.
+Product ID,external_product_id,Basic,1,Required,"Any valid GCID, UPC, or EAN.",5279173125000,"A standard, alphanumeric string that uniquely identifies the product. This could be a GCID (16 alphanumeric characters), UPC or EAN. This is a required field if product_id_type is provided."
+Product ID Type,external_product_id_type,Basic,1,Required,"The type of standard, unique identifier entered in the Product ID field. This is a required field if Product ID is provided.",UPC,"The type of standard, unique identifier entered in the Product ID field. This is a required field if Product ID is provided."
+Title,item_name,Basic,1,Required,"An alphanumeric string; 1 character minimum in length and 500 characters maximum in length. Note: Type 1 High ASCII characters (®, ©, ™, etc.) or other special characters are not supported.","Acme Z325L - 50"" Plasma TV","A short title for the product, including the colour and size if applicable. This will be displayed in bold on the product page and in the title bar of the browser window."
+Manufacturer,manufacturer,Basic,1,Required,An alphanumeric string; 1 character minimum in length and 50 characters maximum in length.,Amcme International,Specify the manufacturer for your product.
+Description,product_description,Basic,1,Optional,"A text string; 2,000 characters maximum in length. Note: Type 1 High ASCII characters (®, ©, ™, etc.) or other special characters are not supported.","For speed and versatility, look to the LG Super-Multi Drive. The GSA-4040B records data up to 4.7 GB per side on DVD media and writes in all kinds of formats: DVD+R/+RW, DVD-R/-RW, DVD-RAM and CD-R/-RW. This drive is suitable for any application…","A text description of the product. If you see #### signs where you should see the text, clear the format of the cell. This can be done by clicking Edit in main menu, select Clear & then Formats."
+Item Type,item_type,Basic,1,Required,Select an item type value from the Browse Tree Guide.,Television,"This determines what browse node(s) the item will be assigned to.  Please consult the Browse Tree Guide for the best value(s) to use for your product.  If no values are provided, your product will not be browsable."
+Mfr Part Number,part_number,Basic,1,Optional,An alphanumeric string; 1 character minimum in length and 40 characters maximum in length.,SB-122,"If applicable, please submit the manufacturer's part number for the product.  For most products, this will be identical to the model number; however, some manufacturers distinguish part number from model number."
+Model Number,model,Basic,1,Optional,String of text with max of 50 characters,"AK3-AT1-GL-M-X, MC700LL/A","Indicate the model number of the product, as assigned by the manufacturer, here. Note that this should be distinct from Model Name and Manufacturer Part Number."
+Model Name,model_name,Basic,1,Optional,"Specify the model name of the product as defined by the manufacturer or brand excluding item type, color, brand or size",MacBook Pro,
+Your Price,standard_price,Basic,1,Required,Up to 18 digits. Commas and currency symbols cannot be used.,21000,Please always input a valid value (0 ~ 50) for standard_price_points_percent when you input or update standard_price
+Quantity,quantity,Basic,1,Required,,,
+Main Image URL,main_image_url,Basic,1,Required,"Images should have 72-pixels-per-inch resolution and be 500 pixels minimum in length (on the longest side). The preferred file format is JPEG (.jpg), and the URL must be fully-formed and valid (i.e., include http://). When naming your image, you may use the following convention (though not required): Product SKU + View Indicator (.main) + File Extension (.jpg). An example would be: ""15774.main.jpg"".  There cannot be any spaces or high ASCII characters in the image url.  Save the image to your Web server and supply the URL to the image in this field.  Accepted formats are .jpeg, .jpg, and .gif",http://www.companyname.com/images/1250.main.jpg,The URL where a main image of the product is located.  It's important that this is supplied for all products.
+Other Image URL,other_image_url,Basic,8,,,,
+Swatch Image URL,swatch_image_url,Basic,1,Optional,The URL where an image of a color swatch from the product is located,http://www.companyname.com/images/1250.swatch.jpg,The URL where an image of a color swatch from the product is located.
+Parentage,parent_child,Variation,1,Optional,"Please select one of the following values: parent, child",parent,"Defines the product within a relationship with another, similar product.  
+
+The ""parent"" defines the basic data about the product. Parent products are not purchasable; the ""parent"" product simply specifies the attributes of the product that are common among all of its children and only acts as a place holder.  The ""child"" products define the possible variations (i.e., size, color) of the parent product and represent the items that are actually for sale.
+
+This field is required if any of the following columns are populated: variation_theme, color, paper_size, maximum_expandable_size, line_size.  If the product does not participate in a variation relationship, use the value ""child.""
+
+For further information about how to construct a product variation, please refer to this template's ""Example"" tab."
+Parent SKU,parent_sku,Variation,1,Optional,An alphanumeric string; 1 character minimum in length and 40 characters maximum in length.,10162513,"If the product is a child product, list the SKU of the parent product which is related.  DO NOT FILL IN THIS FIELD FOR PARENT PRODUCTS."
+Relationship Type,relationship_type,Variation,1,Optional,"Select one of the following options: 
+Accessory             Variation               Package Contains",Accessory,"Describes the relationship between products that are related. Accessories can be seen on the www.amazon.com site as ""Also Recommended"" selections on certain detail product pages.  Use this field to create an accessory relationship."
+Variation Theme,variation_theme,Variation,1,Optional,Select and applicable variation theme.,Size/Color,"Describes the parameter(s) by which the parent product may vary.  The value input for this field should be the same for both the parent and child SKUs. Example: If the product varies by size, input the value Size. If the product varies by color, input the value Color.   Terms used for variation themes are created by you the merchant. (e.g. 'count' can be any number that you choose)."
+Package Level,package_level,Variation,1,Optional,Select one of the following options: Unit  Case Pallet,Case,Pick an enumeration to represent if the item is a base item or a packaging configuration
+package_contains_quantity,package_contains_quantity,Variation,1,Optional,,,
+package_contains_identifier,package_contains_identifier,Variation,1,Optional,,,
+Bullet Point,bullet_point,Discovery,5,,,,
+Built-In Media,included_components,Discovery,5,,,,
+Generic Keyword,generic_keywords,Discovery,1,Optional,"Provide any terms that may be relevant to customer searches. No repetition, no competitor brand names or ASINs.",Water sport shoes; Derek Rose; Electric; Wi-Fi; Banana,"Search terms that describe your product: no repetition, no competitor brand names or ASINs."
+Additional Features,special_features,Discovery,5,,,,
+Colour,color_name,Discovery,1,Required,"Text - maximum 20 characters. HTML tags and special characters not on a standard keyboard (eg. ®, ©, ™ or other Type 1 High ASCII characters) are not supported",aqua,"The colour of the product. If this is not a standard colour, also use the color-name column to map it to its closest equivalent so that it shows up in our colour filter options in search. For instance, if your colour name is ""aqua"", you should enter ""blue"" in the color-map column"
+Colour Map,color_map,Discovery,1,Optional,"Black
+White
+Transparent
+Blue
+Green
+Red
+Yellow
+Purple
+Orange
+Pink
+Brown
+Silver
+Gold
+Multi-coloured",Black,"If your colour is non-standard, you should map it to its closest equivalent here so that it shows up in our colour filter options in search. For instance, if your colour name is ""aqua"", you should map it to ""blue""; if your colour name is ""violet"", you should map it to ""purple"""
+Size Name,size_name,Discovery,1,Optional,An alphanumeric string; 1 character minimum in length and 50 characters maximum in length.,S: 12.4 x 4.2 x 1 cm,"If your item is differentiated between parent and child by size, use this field to describe the size of the item. 
+
+Note: Before completing this field, make sure the item is a child and that the value in the Parent or Child field for this item is ""Child""."
+Antenna Location,recommended_uses_for_product,Discovery,1,Required,"Indoor, Indoor/Outdoor, Outdoor",Indoor,A description of where the antenna is intended to be used
+Compatible Devices,compatible_devices,Discovery,5,,,,
+Power Source,power_source_type,Discovery,1,Required,"AC, DC, Battery, AC & Battery, Solar, Fuel Cell, Kinetic",DC,Power Source
+Voltage,voltage,Discovery,1,Required,"A number with up to 2 decimal places. Please use a full stop (.) rather than a comma (,) for a decimal point",220,The voltage of the primary power source
+Connector Type Used on Cable,connector_type,Discovery,1,Required,"D-sub 15, Mini sub D15, Mini D15, DB-15, HDB-15, HD-15 or HD15 x any number",D-sub 15 pin x 1,Total number and type of Analog RGB inputs
+Hardware Platform,hardware_platform,Discovery,3,,,,
+Style,style_name,Discovery,1,Optional,"Specify the product's style . Do not include the brand, gender, age range, color or size.",Art Deco,
+Compatible Phone Models,compatible_phone_models,Discovery,3,,,,
+Lithium Battery Voltage Unit of Measure,lithium_battery_voltage_unit_of_measure,Discovery,1,Optional,mV or V.,V,Unit of measure used to describe the lithium battery voltage
+Battery Charge Time Unit Of Measure,battery_charge_time_unit_of_measure,Discovery,1,Optional,"Select one of the following options: days,hours,minutes,months,seconds,weeks,years",hours,"Select the unit of measure for Charging Time.  If Charging Time is used, you must also enter the Charging Time Unit Of Measure."
+Voltage Unit Of Measure,voltage_unit_of_measure,Discovery,1,Required,A positive integer.,120,Indicates the voltage unit of measure for the product.
+Item Type,item_type_name,Discovery,1,Optional,Select a value from the list of Valid Values.,Fashion T-Shirt,Describe the type of the apparel
+Battery Capacity,battery_capacity,Discovery,1,Required,Provide the battery capacity as a numeric value,100,
+Number of Ports,number_of_ports,Discovery,1,Optional,A positive integer.,5,Indicate the number of ports for the product
+Battery Capacity Unit Of Measure,battery_capacity_unit_of_measure,Discovery,1,Required,mAh or Ah,Ah,Unit of measure used to describe the battery capacity.
+Reusability,reusability,Discovery,1,Optional,Provide information as to whether or not this product can be reused,"Disposable, Rechargeable",
+Number of Boxes,number_of_boxes,Discovery,1,Optional,Provide the number of boxes that the product will be shipped in,5,
+Battery Charge Time,battery_charge_time,Discovery,1,Optional,Provide the amount of time it takes to fully charge the battery as a numeric value,"2.25, 30",
+Certifying Authority Name,legal_compliance_certification_certifying_authority_name,Product Enrichment,1,Optional,Provide the certificate's certifying authority,Intertek- a CARB approved Third Party Certifier (TPC),Provide the certificate's certifying authority
+Output Current Unit,output_current_unit_of_measure,Product Enrichment,1,Optional,Select the corresponding unit,Amps,
+flash_point_unit_of_measure,flash_point_unit_of_measure,Product Enrichment,1,Optional,,,
+Fulfillment Center Shelf Life Unit,fc_shelf_life_unit_of_measure,Product Enrichment,1,Optional,Provide the total number of days the item may be stored before expiration. Fulfillment technology requires this value in days.,Days,
+Output Current,output_current,Product Enrichment,1,Optional,Provide the Output Current Value,15,
+Control Method,control_method,Product Enrichment,1,Optional,Select the method by which the product can be controlled,"App, Voice",
+Geographic Jurisdiction,legal_compliance_certification_geographic_jurisdiction,Product Enrichment,1,Optional,Provide the jurisdiction related to the certification,CA,Provide the jurisdiction related to the certification
+Manufacturer Recommended Maximum Weight,maximum_weight_recommendation,Dimensions,1,Optional,A number with up to 10 digits to the left of the decimal point and 2 digits to the right of the decimal point. Please do not use commas.,200,"The maximum weight that the mount can support (in pounds, lbs)"
+Unit Count,unit_count,Dimensions,1,Optional,"For products that are consumed by volume, weight, linear dimension, etc., provide the net quantity that would be shipped to a customer who orders one ASIN (e.g. 12 pack of 6 floz. bottles of water = 72, vs. a single 2 liter bottle = 2). For products consumed as individual units, provide the total number of units (pack of 12 pens = 12). For packed assortments of non-identical items, enter 1",72.0,The number of units you are selling. This will be used to calculate Price per Unit.
+Maximum Weight Recommendation Unit Of Measure,maximum_weight_recommendation_unit_of_measure,Dimensions,1,Optional,"Select one of the following options: GR, KG, OZ, or LB.",LB,Indicate the unit of measure that you used on the weight value you provided.
+size_map,size_map,Dimensions,1,Optional,,,
+Unit Count Type,unit_count_type,Dimensions,1,Optional,"For items consumed by volume, weight, linear dimension etc., provide the unit of measure listed on the products. For products consumed as individual units, enter: count","Count, Gram","If the product being sold has a measurement in units that is relative to the customer making a purchase decision, than the unit_count_type is the description of that unit of measurement. A bottle of soda can come in various sizes and is measured in fluid ounces; a box of screws is measured by the count of screws in the box."
+Item Length Top to Bottom,thickness_head_to_toe,Dimensions,1,Required,Provide the length of the item when positioned vertically. The length is measured top to bottom.,30,
+Item Length Unit,thickness_head_to_toe_unit_of_measure,Dimensions,1,Required,Select the unit of measure for the item length.,"Inches, Centimeters",
+Item Width Side to Side,thickness_width_side_to_side,Dimensions,1,Required,Provide the width of the item when positioned vertically. The width is measured side to side.,15,
+Item Width Unit,thickness_width_side_to_side_unit_of_measure,Dimensions,1,Required,Select the unit of measure for the item width.,"Inches, Centimeters",
+Thickness,thickness_floor_to_top,Dimensions,1,Required,Provide the thickness of the item when positioned vertically. Thickness is measured front to back.,25,
+Item Thickness Unit,thickness_floor_to_top_unit_of_measure,Dimensions,1,Required,Select the unit of measure for the item thickness.,"Inches, Centimeters",
+Fulfillment Center ID,fulfillment_center_id,Fulfillment,1,Optional,"AMAZON_NA, DEFAULT",AMAZON_NA,"Amazon-fulfilled products: For those merchants using Amazon fulfillment services, this designates which fulfillment network will be used. Specifying a value other than ‘DEFAULT’ for fulfillment_center_id will cancel the Merchant-fulfilled offering.  Resubmitting with a blank or ‘DEFAULT’ value for the fulfillment_center_id, along with quantity, will switch the item back to Merchant-fulfilled.  
+Merchant-fulfilled products: Do not enter fulfillment_center_id, as it is not applicable."
+Package Height,package_height,Fulfillment,1,Optional,A number with up to 10 digits to the left of the decimal point and 2 digits to the right of the decimal point.,10,"The height measurement of the package. If you are an FBA seller and are using a non-default value for fulfillment_center_id, package height is required and must be populated."
+Package Width,package_width,Fulfillment,1,Optional,A number with up to 10 digits to the left of the decimal point and 2 digits to the right of the decimal point.,5.5,"The width measurement of the package. If you are an FBA seller and are using a non-default value for fulfillment_center_id, package width is required and must be populated."
+Package Length,package_length,Fulfillment,1,Optional,A number with up to 10 digits to the left of the decimal point and 2 digits to the right of the decimal point.,5.5,"The length measurement of the package. If you are an FBA seller and are using a non-default value for fulfillment_center_id, package length is required and must be populated."
+Package Weight,package_weight,Fulfillment,1,Optional,A number with up to 10 digits to the left of the decimal point and 2 digits to the right of the decimal point.,10,The weight of the shippable package. This value is used for the FBA feature.
+Package Weight Unit Of Measure,package_weight_unit_of_measure,Fulfillment,1,Optional,"Select from the following valid values: 
+OZ
+LB
+GR
+KG",KG,The unit of measure used to describe the weight of the shippable package.
+Package Height Unit Of Measure,package_height_unit_of_measure,Fulfillment,1,Optional,,,
+Package Width Unit Of Measure,package_width_unit_of_measure,Fulfillment,1,Optional,,,
+Package Length Unit Of Measure,package_length_unit_of_measure,Fulfillment,1,Optional,,,
+Compliance Regulation Type,regulation_type,Compliance,5,,,,
+Regulatory Identification,regulatory_compliance_certification_value,Compliance,5,,,,
+Country of Origin,country_of_origin,Compliance,1,Optional,Select the product's country of origin,China,Please refer to the list of values in the dropdown menu.
+Battery composition,battery_cell_composition,Compliance,1,Required,What type or composition is the battery?,lithium_ion,Commonly printed on the battery or outer packaging
+Battery type/size,battery_type,Compliance,3,,,,
+Watt hours per battery,lithium_battery_energy_content,Compliance,1,Required,A positive whole number.,"1, 2, 3",Commonly printed on the battery or outer packaging
+Lithium Battery Packaging,lithium_battery_packaging,Compliance,1,Required,Select “in equipment” if the battery is contained in the item . Select “with equipment” if the battery is packed separately with the device it is meant to power. Select “only” if the product is a battery sold alone or with items it is not meant to power.,"Batteries contained in equipment, Batteries packed with equipment, Batteries only",“Batteries only”: the battery or batteries are sold alone or with items they are not meant to power. “With equipment”: the battery is included in the package but not pre-installed. “In equipment”: the battery is pre-installed in the item.
+Number of batteries,number_of_batteries,Compliance,3,,,,
+Batteries are Included,are_batteries_included,Compliance,1,Required,Select: true or false,TRUE,"Select ""yes"" if batteries are contained in the product (e.g. batteries inside a pair of Bluetooth headphones) and/or included with the product (e.g. batteries packed separately with a camera), otherwise select ""no"""
+Item Weight,item_weight,Compliance,1,Required,Provide the item weight numeric value (not including the packaging),"30.0, 1.5",The weight of the product.
+Item Weight Unit,item_weight_unit_of_measure,Compliance,1,Required,Provide unit for item weight,"Pounds, Grams",The unit of measure used to describe the weight of the product without shipping material.
+Cpsia Warning,cpsia_cautionary_statement,Compliance,1,Optional,"Use this field to indicate if a cautionary statement relating to the choking hazards of children's toys and games applies to your product.  These cautionary statements are defined in Section 24 of the Federal Hazardous Substances Act and Section 105 of the Consumer Product Safety Improvement Act of 2008.  They must be displayed on the product packaging and in certain online and catalog advertisements.  You are responsible for determining if a cautionary statement applies to the product.  This can be verified by contacting the product manufacturer or checking the product packaging.   Cautionary statements that you select will be displayed on the product detail page.  If no cautionary statement applies to the product, select ""no_warning_applicable"".",choking_hazard_balloon,"Select from the following Valid Values: 
+choking_hazard_balloon
+choking_hazard_contains_a_marble
+choking_hazard_contains_small_ball
+choking_hazard_is_a_marble
+choking_hazard_is_a_small_ball
+choking_hazard_small_parts
+no_warning_applicable"
+Is this product a battery or does it utilize batteries?,batteries_required,Compliance,1,Required,Select 'yes' if batteries are required to power the item (or if the item is a battery) or 'no' if they are not. Please note that an internal rechargeable battery is also considered a battery,FALSE,"An internal rechargeable, non-replaceable battery (e.g. laptop battery) is also considered a battery."
+Battery weight (grams),battery_weight,Compliance,1,Required,Number up to 10 digits and 2 decimal points long.,150,Provide the total net weight of the batteries included. This is the weight of the standalone batteries not including packaging or the device it may be used in.
+Battery Weight Unit,battery_weight_unit_of_measure,Compliance,1,Required,Provide unit for battery weight,Grams,Unit of measure used to describe the battery weight
+Number of Lithium Metal Cells,number_of_lithium_metal_cells,Compliance,1,Required,Specify the total number of Lithium Metal cells in the product where the cell isn't contained in an encased battery (e.g. coin cells),7,"Total number of Lithium cells (of type Metal) in the product, where the cell isn't contained in an encased battery."
+Number of Lithium-ion Cells,number_of_lithium_ion_cells,Compliance,1,Required,"Specify the total number of Lithium-ion cells in the product where the cell isn't contained in an encased battery. For example, an AA battery is considered a cell",7,"Total number of Lithium cells (of type Ion) in the product, where the cell isn't contained in an encased battery."
+Lithium Battery Energy Content Unit,lithium_battery_energy_content_unit_of_measure,Compliance,1,Required,Select the corresponding unit,Watt Hours,Indicate unit of measure if Lithium Battery Energy Content is populated
+Lithium content (grams),lithium_battery_weight,Compliance,1,Required,A positive whole number.,"1, 2, 3",Commonly found in manufacturer's technical information
+Lithium Battery Weight Unit,lithium_battery_weight_unit_of_measure,Compliance,1,Required,Select the corresponding weight unit,Grams,"Select the unit of measure for Lithium Battery Weight  . If Lithium Battery Weight  is used, you must also enter theLithium Battery Weight  Unit Of Measure."
+Dangerous Goods Regulations,supplier_declared_dg_hz_regulation,Compliance,5,,,,
+Hazmat,hazmat_united_nations_regulatory_id,Compliance,1,Required,Provide hazmat information that is relevant to the product based on the aspect selected,UN1993,"Usually found in the Safety Data Sheet or procured from the manufacturer/distributor. For more information, refer to the help pages."
+Safety Data Sheet (SDS or MSDS) URL,safety_data_sheet_url,Compliance,1,Required,Provide the SDS/MSDS URL if any value other than Not Applicable or Unknown is selected in the Dangerous Goods Regulation column.,www.safetysheetsRus.com/hazardous_substance/msds.pdf,"Can be procured from the manufacturer/distributor. For more information, refer to the help pages."
+Volume,item_volume,Compliance,1,Required,A number with up to 10 digits to the left of the decimal point and 2 digits to the right of the decimal point. Please do not use commas.,34.78,Indicates the volume capacity of a product.
+item_volume_unit_of_measure,item_volume_unit_of_measure,Compliance,1,Required,Indicates the volume capacity of a product.,milliliters,Indicates the volume capacity of a product.
+Compliance Certification Status,legal_compliance_certification_status,Compliance,1,Optional,"If you have the required certification for compliance, select Compliant; if not, select, Non-compliant, and if not needed, select Exempt","Compliant, Exempt",
+Flash point (°C)?,flash_point,Compliance,1,Optional,A number with up to 10 digits allowed to the left of the decimal point and 2 digits to the right of the decimal point. Please do not use commas.,180,"Commonly found in Safety Data Sheet or provided by manufacturer. For more information, refer to the help pages."
+Certification Date of Issue,legal_compliance_certification_date_of_issue,Compliance,1,Optional,Provide the certification date of issue using YYYY-MM-DD format,7/20/2017,
+Compliance Certification Value,legal_compliance_certification_metadata,Compliance,1,Optional,"Provide the required certification information to indicate compliance, such as an EO Number or judgement order. If you do not have one or are Exempt, please submit NA","d-759-1, Not Applicable",
+legal_compliance_certification_expiration_date,legal_compliance_certification_expiration_date,Compliance,1,Optional,,,
+Regulatory Organization Name,legal_compliance_certification_regulatory_organization_name,Compliance,1,Optional,Select the applicable authority governing the regulation/restriction,California Environmental Protection Agency - Air Resources Board,
+Compliance Media Content Type,compliance_media_content_type,Compliance,17,,,,
+Warranty Description,warranty_description,Compliance,1,Optional,Provide a description of the product's warranty,2 year manufacturer,
+Has Less than 30 Percent State of Charge,has_less_than_30_percent_state_of_charge,Compliance,1,Preferred,Provide whether the item's battery contains less than 30 percent charge during shipping.,Yes,
+Compliance Media Source Location,compliance_media_source_location,Compliance,17,,,,
+Legal Compliance Certification,legal_compliance_certification_value,Compliance,1,Optional,Insert the legal compliance certification,820101002,Insert the legal compliance certification
+Compliance Media Language,compliance_media_content_language,Compliance,17,,,,
+GHS Class,ghs_classification_class,Compliance,3,,,,
+California Proposition 65 Warning Type,california_proposition_65_compliance_type,Compliance,1,Optional,"Select the warning type applicable to your product, if any. You certify that the warning provided satisfies legal requirements and that you’ll remove a warning previously provided only if it is no longer legally required.",Furniture,This attribute captures information needed from suppliers which is used to display applicable California Proposition 65 warnings on the detail page
+California Proposition 65 Chemical Name(s),california_proposition_65_chemical_names,Compliance,5,,,,
+Pesticide Marking,pesticide_marking_type,Compliance,3,,,,
+Pesticide Registration Status,pesticide_marking_registration_status,Compliance,3,,,,
+Pesticide Certification Number,pesticide_marking_certification_number,Compliance,3,,,,
+Radio Frequency Emission & Authorization Status,fcc_radio_frequency_emission_compliance_registration_status,Compliance,1,Optional,"Indicate whether this product is capable of emitting radio frequency energy, and if so, what type of FCC RF equipment authorization this product has.",,
+SDoC Contact Email Address,fcc_radio_frequency_emission_compliance_point_of_contact_email,Compliance,1,Optional,"If the device has an SDoC, provide an e-mail address (in this field) or a US phone number (in the next field) for the Responsible Party, as defined by the FCC. If you provide a phone number in the next field, you may enter ""N/A"" in this field.",,
+SDOC Contact US Phone Number,fcc_radio_frequency_emission_compliance_point_of_contact_phone_number,Compliance,1,Optional,"If the device has an SDoC, provide a US phone number (in this field) or an e-mail address (in the prior field) for the Responsible Party, as defined by the FCC. If you provide an e-mail address in the prior field, you may enter ""N/A"" in this field.",,
+SDoC Contact Name,fcc_radio_frequency_emission_compliance_point_of_contact_name,Compliance,1,Optional,"If the device has a Supplier's Declaration of Conformity, provide the name of the point of contact for the Responsible Party, as defined by the FCC.",,
+FCC ID,fcc_radio_frequency_emission_compliance_identification_number,Compliance,1,Optional,"If the device has an FCC ID, provide it.",,
+SDoC Contact US Mailing Address,fcc_radio_frequency_emission_compliance_point_of_contact_address,Compliance,1,Optional,"If the device has a Supplier's Declaration of Conformity, provide a US mailing address for the Responsible Party, as defined by the FCC.",,
+Shipping-Template,merchant_shipping_group_name,Offer,1,Optional,The ship configuration group for an offer. The ship configuration group is created and managed by the seller through the ship setting UI.,"""Free Shipping Template"", ""Default Template""","Sellers can create a set of ship configurations based on business needs and use cases. The ship configurations can be region based and have rules to set SLA and rate for the region. When listing product to create offer, seller needs to select one ship configuration for the product. The ship configuration will be used to retrieve the valid ship options on the website."
+Product Tax Code,product_tax_code,Offer,1,Optional,Enter the product tax code supplied to you by Amazon.com.,A_GEN_NOTAX,Amazon.com's standard code to identify the tax properties of a product.
+List Price,list_price,Offer,1,Optional,"Provide the list price for the product not including tax. List Price is the suggested retail price of a product as provided by a manufacturer, supplier, or seller. This is not the offering or cost price. If you are unable to provide a list price, enter a value of 0",259.99,"Manufacturer's suggested retail price or list price for the product. This is not the same as the offering price, which is specified in the item-price field."
+Currency,currency,Offer,1,Optional,Three letter currency code,USD,"The currency code for price data.  This is required if map, msrp, standard_price, or sale_price is provided.  The same currency will apply to all price-related fields."
+Minimum Advertised Price,map_price,Offer,1,Optional,"For MAP (Minimum Advertised Price) based pricing.  If you have never heard this term before, this function probably does not apply to you.",259.99,"For MAP (Minimum Advertised Price) based pricing. If you have never heard this term before, this function probably does not apply to you."
+Max Order Quantity,max_order_quantity,Offer,1,Optional,The maximum quantity of the product that a customer may purchase in one order,10,Maximum number of items that can be ordered
+Handling Time,fulfillment_latency,Offer,1,Optional,"Indicates the time, in days, between when you receive an order for an item and when you can ship the item.  The default is one to two business days. Use this field if you expect to take longer than two business days.",5,"Indicates the time, in days, between when you receive an order for an item and when you can ship the item. The default production time is one to two business days. Use this field if your production time is greater than two business days."
+Item Condition,condition_type,Offer,1,Optional,"Used; Like New
+Used; Very Good
+Used; Good
+Used; Acceptable
+Collectible; Like New
+Collectible; Very Good
+Collectible; Good
+Collectible; Acceptable
+New",New,A numerical entry that indicates the condition of the item. Review the condition guidelines definitions.
+Condition Note,condition_note,Offer,1,Optional,"A text string with a maximum of 1,000 characters. The Condition Note field doesn’t allow special characters.",Small dent in left side panel.,"Descriptive text explaining the item’s condition. This Condition Note field is limited to 1000 characters for all Used, Collectible, and Refurbished items. Condition notes are not accepted for products with a condition type of new."
+Sale Price,sale_price,Offer,1,Optional,Up to 18 digits. Commas and currency symbols cannot be used.,219.99,"If you use this field, please also set values for Standard Price (standard_price), Sale Start Date (SaleStartDate), and Sale End Date (SaleEndDate).
+Consumption tax shall be included. You won't be taxed separatedly by Amazon. 
+If you set a variation, please only input for the child SKU.
+Be sure to set the currency code (Currency) as well.
+Please always input a valid value (0 ~ 50) for sale_price_points_percent when you input or update sale_price"
+Sale Start Date,sale_from_date,Offer,1,Optional,The date that the sale price will begin to override the product's standard price; the sale price will be displayed after 0:00AM of Sale From Date.,2017-06-30,The date that the sale price will begin to override the product's standard price; the sale price will be displayed after 0:00AM of Sale From Date. Use the format yyyy-mm-dd.
+Sale End Date,sale_end_date,Offer,1,Optional,The last date that the sale price will override the item's standard price; the product's standard price will be displayed after 0:00AM of Sale End Date.,2017-07-01,The last date that the sale price will override the item's standard price; the product's standard price will be displayed after 0:00AM of Sale End Date. Use the format yyyy-mm-dd.
+Number of Items,number_of_items,Offer,1,Optional,The number of items that are included in the product,6,A whole number
+Offering Can Be Gift Messaged,offering_can_be_gift_messaged,Offer,1,Optional,Select: true or false,TRUE,"If you can print a gift message with the item indicate that here.  If left blank, defaults to 'false'."
+Is Gift Wrap Available,offering_can_be_giftwrapped,Offer,1,Optional,Select: True or False,"False, True","If you can gift wrap an item indicate that here.  If left blank, defaults to 'false'."
+Launch Date,product_site_launch_date,Offer,1,Optional,This is the date when customers will start viewing this product on Amazon.,MM/DD/YYYY,"Specify the Date for when this item can launch on the site (this applies only to you product uploads after you have launched).  For upload and testing purposes, set this date to a date at one year into the future.  When you perform the final upload, use previous day's date."
+Release Date,merchant_release_date,Offer,1,Optional,This field is used to setup pre-order and is the date from when the pre-ordered product will be available to be shipped to customers.,MM/DD/YYYY,The first date on which you can deliver a pre-orderable product (one that has never been available prior to this date) to a customer.
+Restock Date,restock_date,Offer,1,Optional,This field is used to setup back-order and is the date when the back-ordered products will be available for shipping to customers.,MM/DD/YYYY,This is the date that a merchant will be able to ship any back-ordered items to a customer.
+Is Product Expirable,is_expiration_dated_product,Offer,1,Optional,"Does your product expire or lose effectiveness over time? Select “Yes” if the product meets one of the following criteria: (1) has a printed expiration date, (2) is a topical or consumable product for either human or animal use, or (3) has a recommended shelf life. “For more information, refer to Expiry Seller policy and help page(s).",TRUE,"Does your product expire or lose effectiveness over time? Select “Yes” if the product meets one of the following criteria: (1) has a printed expiration date, (2) is a topical or consumable product for either human or animal use, or (3) has a recommended shelf life. “For more information, refer to Expiry Seller policy and help page(s)."
+Fulfillment Center Shelf Life,fc_shelf_life,Offer,1,Optional,"FC Shelf Life is the number of days the product may be stored without becoming unfit for sale. For more information, refer to Expiry Seller policy and help page(s).",90,"FC Shelf Life is the number of days the product may be stored without becoming unfit for sale. For more information, refer to Expiry Seller policy and help page(s)."
+Offer End Date,offering_end_date,Offer,1,Optional,"This is the date from when customer cannot place an order on your product, irrespective of the stock in hand. But the product still be active, if other Selling Partners are selling this product.",MM/DD/YYYY,Specify the date when this item can be discontinued on the site.
+Product Expiration Type,product_expiration_type,Offer,1,Optional,"1) Expiration Date Required: The expiration date is printed on product packaging. 2) Expiration on Package: The product will be reviewed for an expiration date at inbound. 3) Production Date Required: The production or manufacturing date is printed on product packaging. 4) Shelf Life: The product will lose effectiveness over time but does not have a clear expiration date or production date. For example: Batteries & Beauty Supplies. For more information, refer to Expiry Seller policy and help page(s).",Shelf Life,"1) Expiration Date Required: The expiration date is printed on product packaging. 2) Expiration on Package: The product will be reviewed for an expiration date at inbound. 3) Production Date Required: The production or manufacturing date is printed on product packaging. 4) Shelf Life: The product will lose effectiveness over time but does not have a clear expiration date or production date. For example: Batteries & Beauty Supplies. For more information, refer to Expiry Seller policy and help page(s)."
+item_package_quantity,item_package_quantity,Offer,1,Optional,,,
+Offer Start Date,offering_start_date,Offer,1,Optional,"Once the product is launched on Amazon, customers can start placing orders on your product from this date.",MM/DD/YYYY,This is the first date on which a merchant can deliver a pre-orderable product (one that has never been available prior to this date) to a customer.
+Business Price,business_price,B2B,1,Optional,"The price at which the merchant offers the product to registered business buyers for sale, expressed in U.S. dollars.",10.5,"The price at which the merchant offers the product to Verified Business customers, expressed in U.S. dollars. If price exists, business-price should be less than or equal to price, as business-price represents a discount for business customers. The price should be greater than 0. Do not include thousands separators or currency symbols. This field is required if quantity prices are provided."
+Quantity Price Type,quantity_price_type,B2B,1,Optional,The unit of measure the discount will be expressed in. Either Fixed price in U.S. dollars or Percent Off,Fixed,"Either fixed or percent. When fixed is selected, quantity prices are expressed in U.S. dollars. When percent is selected, quantity prices are calculated as a percent off the business price."
+Quantity Lower Bound,quantity_lower_bound,B2B,5,,,,
+Quantity Price,quantity_price,B2B,5,,,,
+Progressive Discount Type,progressive_discount_type,B2B,1,Optional,The unit of measure the discount will be expressed in either Fixed price in U.S. dollars or Percent Off.,Fixed,Fixed price or a percentage off of Business price.
+National Stock Number,national_stock_number,B2B,1,Optional,A alpha-numeric 13 digit code. Code identifying standard material items of supply as defined by NATO,6240-00-027-2059,A alpha-numeric 13 digit code. Code identifying standard material items of supply as defined by NATO
+United Nations Standard Products and Services Code,unspsc_code,B2B,1,Optional,An 8 digit code A numeric code classifying products according to the UNSPSC system,47121602,An 8 digit code A numeric code classifying products according to the UNSPSC system
+Progressive Discount Lower Bound,progressive_discount_lower_bound,B2B,3,,,,
+Progressive Discount Value,progressive_discount_value,B2B,3,,,,
+Pricing Action,pricing_action,B2B,1,Optional,delete business_price (without the quotes),delete business_price,"Specifies the actions that need to be performed on the price attributes of this SKU. The only action currently supported by the system is deleting the business_price.
+Set this field to ""delete business_price"" when you want to remove a previously submitted business_price and any quantity discounts. If left blank, no action will be performed and the contents of this column will be ignored."

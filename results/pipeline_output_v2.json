@@ -1,0 +1,602 @@
+{
+  "pipeline_meta": {
+    "asin": "B0EXAMPLE_POWERBANK",
+    "market": "us",
+    "category_path": "cell_phones_accessories/accessories/chargers_power_adapters/portable_power_banks",
+    "catalog_fields": 161,
+    "catalog_required_fields": 43,
+    "catalog_valid_value_fields": 70,
+    "started_at": "2026-03-05T01:34:30.636885+00:00",
+    "finished_at": "2026-03-05T01:34:30.678422+00:00",
+    "elapsed_seconds": 0.04
+  },
+  "grades_summary": {
+    "skill_01_taxonomy": "A",
+    "skill_02_npo": "F",
+    "skill_03_ugc": "F",
+    "skill_04_visual_seo": "F",
+    "skill_05_aplus": "C",
+    "skill_06_mobile": "C",
+    "skill_07_integrity": "C"
+  },
+  "skill_01": {
+    "skill_id": "01",
+    "skill_name": "Structured Taxonomy & Attribute Injection",
+    "asin": "B0EXAMPLE_POWERBANK",
+    "audit": {
+      "null_fields": {},
+      "null_count": 0,
+      "standardized_values": {},
+      "standardized_count": 0,
+      "knowledge_graph_mapping": {}
+    },
+    "injection_payload": {
+      "capacity_mah": 20000,
+      "output_ports": 3,
+      "usb_c_output": "65W PD 3.0",
+      "usb_a_output_1": "18W QC 3.0",
+      "usb_a_output_2": "12W",
+      "input": "65W USB-C PD",
+      "total_output": "65W max",
+      "weight_grams": 450,
+      "dimensions_inches": "6.3 x 3.1 x 0.9",
+      "waterproof_rating": "IPX5",
+      "charging_standard": "PD 65W + QC 3.0",
+      "battery_type": "Li-ion 21700 cells",
+      "cell_count": 4,
+      "energy_wh": 74,
+      "charge_cycles": 500,
+      "operating_temp_c": "-10 to 45",
+      "certifications": "FCC, CE, RoHS, UN38.3, MSDS",
+      "material": "Aircraft-grade Aluminum Alloy + ABS",
+      "led_display": "Yes, percentage readout",
+      "pass_through_charging": "Yes",
+      "tsa_approved": true,
+      "feed_product_type": "ConsumerElectronics",
+      "item_sku": "PB-20K-BLK-001",
+      "brand_name": "VoltCharge",
+      "item_name": "VoltCharge PowerCore 20000mAh Portable Power Bank — USB-C PD 65W Fast Charging for iPhone, Android, MacBook, Camping Travel",
+      "manufacturer": "VoltCharge International Ltd.",
+      "product_description": "The VoltCharge PowerCore delivers 20000mAh of portable power with 65W USB-C PD fast charging. Charge your MacBook Pro to 50% in just 30 minutes. IPX5 water-resistant with aircraft-grade aluminum chassis. TSA-approved for carry-on. Includes USB-C to USB-C cable and travel pouch.",
+      "item_type": "portable-power-bank",
+      "external_product_id": "0850045678901",
+      "external_product_id_type": "UPC",
+      "color_name": "Midnight Black",
+      "color_map": "Black",
+      "recommended_uses_for_product": "Indoor",
+      "power_source_type": "DC",
+      "voltage": "5",
+      "voltage_unit_of_measure": "Volts",
+      "connector_type": "USB-C",
+      "battery_capacity": "20000",
+      "battery_capacity_unit_of_measure": "milliamp_hours",
+      "battery_cell_composition": "Lithium-Ion",
+      "number_of_ports": "3",
+      "reusability": "Rechargeable",
+      "battery_charge_time": "1.5",
+      "battery_charge_time_unit_of_measure": "Hours",
+      "are_batteries_included": "Yes",
+      "batteries_required": "Yes",
+      "lithium_battery_packaging": "Batteries only",
+      "number_of_batteries": "1",
+      "number_of_lithium_ion_cells": "4",
+      "number_of_lithium_metal_cells": "0",
+      "lithium_battery_energy_content": "74",
+      "lithium_battery_energy_content_unit_of_measure": "Watt Hours",
+      "lithium_battery_weight": "320",
+      "lithium_battery_weight_unit_of_measure": "Grams",
+      "battery_weight": "320",
+      "battery_weight_unit_of_measure": "GR",
+      "item_weight": "450",
+      "item_weight_unit_of_measure": "Grams",
+      "item_volume": "240",
+      "item_volume_unit_of_measure": "milliliters",
+      "country_of_origin": "China",
+      "has_less_than_30_percent_state_of_charge": "Yes",
+      "thickness_head_to_toe": "6.3",
+      "thickness_head_to_toe_unit_of_measure": "Inches",
+      "thickness_width_side_to_side": "3.1",
+      "thickness_width_side_to_side_unit_of_measure": "Inches",
+      "thickness_floor_to_top": "0.9",
+      "thickness_floor_to_top_unit_of_measure": "Inches",
+      "standard_price": "49.99",
+      "currency": "USD",
+      "condition_type": "New",
+      "fulfillment_center_id": "AMAZON_NA",
+      "browse_tree": {
+        "category": "Cell Phones & Accessories",
+        "node_id": "2407749011",
+        "node_path": "Cell Phones & Accessories > Accessories > Chargers & Power Adapters > Portable Power Banks"
+      }
+    },
+    "scores": {
+      "completeness_pct": 100.0,
+      "grade": "A",
+      "high_confidence_tokens": 73
+    }
+  },
+  "skill_02": {
+    "skill_id": "02",
+    "skill_name": "Noun Phrase Optimization (NPO) & RAG-Ready Copy",
+    "asin": "B0EXAMPLE_POWERBANK",
+    "npo": {
+      "input_keywords": [
+        "portable power bank 20000mah",
+        "fast charging power bank usb c",
+        "portable charger for camping",
+        "65w pd power bank for macbook",
+        "power bank for iphone android",
+        "travel power bank tsa approved",
+        "high capacity portable charger"
+      ],
+      "output_noun_phrases": [
+        "Portable power bank with 20000mah capability for enhanced user experience",
+        "Fast charging power bank usb with c capability for enhanced user experience",
+        "portable charger that delivers superior performance for camping",
+        "65w pd power bank that delivers superior performance for macbook",
+        "power bank that delivers superior performance for iphone android",
+        "Travel power bank tsa with approved capability for enhanced user experience",
+        "High capacity portable with charger capability for enhanced user experience"
+      ],
+      "phrase_count": 7
+    },
+    "copy": {
+      "rag_ready_bullets": [
+        "Designed for 20000mAh high-capacity portable power bank charges iPhone 15 Pro Max 4.5 times, Samsung Galaxy S24 3.8 times, or MacBook Air once on a single charge",
+        "Built for 65W USB-C PD 3.0 fast charging output — charge your MacBook Pro to 50% in just 30 minutes, with simultaneous 3-device charging via USB-C + dual USB-A ports",
+        "Ideal when IPX5 water-resistant with aircraft-grade aluminum chassis and drop-tested to MIL-STD-810G — built for camping, hiking, and travel adventures",
+        "Perfect for TSA-approved 74Wh battery meets FAA carry-on regulations — LED percentage display shows exact remaining power at a glance",
+        "Engineered to What's in the box: VoltCharge PowerCore 20000, USB-C to USB-C cable, travel pouch, quick start guide, and 18-month manufacturer warranty"
+      ],
+      "title": {
+        "original": "VoltCharge PowerCore 20000mAh Portable Power Bank — USB-C PD 65W Fast Charging for iPhone, Android, MacBook, Camping Travel",
+        "optimized": "VoltCharge PowerCore 20000mAh Portable Power Bank — USB-C PD 65W Fast Charging for iPhone, Android, MacBook, Camping Travel",
+        "char_count": 123,
+        "truncated_preview_70": "VoltCharge PowerCore 20000mAh Portable Power Bank — USB-C PD 65W Fast",
+        "leads_with_category": true
+      }
+    },
+    "scores": {
+      "semantic_density": {
+        "per_bullet": [
+          {
+            "bullet": "Designed for 20000mAh high-capacity portable power bank charges iPhone 15 Pro M…",
+            "np_hits": 0
+          },
+          {
+            "bullet": "Built for 65W USB-C PD 3.0 fast charging output — charge your MacBook Pro to 50…",
+            "np_hits": 0
+          },
+          {
+            "bullet": "Ideal when IPX5 water-resistant with aircraft-grade aluminum chassis and drop-t…",
+            "np_hits": 0
+          },
+          {
+            "bullet": "Perfect for TSA-approved 74Wh battery meets FAA carry-on regulations — LED perc…",
+            "np_hits": 0
+          },
+          {
+            "bullet": "Engineered to What's in the box: VoltCharge PowerCore 20000, USB-C to USB-C cab…",
+            "np_hits": 0
+          }
+        ],
+        "average_np_hits": 0.0,
+        "density_label": "LOW",
+        "density_score": 0.0
+      },
+      "grade": "F"
+    }
+  },
+  "skill_03": {
+    "skill_id": "03",
+    "skill_name": "UGC Ground Truth Mining & Q&A Seeding",
+    "asin": "B0EXAMPLE_POWERBANK",
+    "ugc_mining": {
+      "technical_questions_found": [
+        "('Does it', '', '', '', '')",
+        "('Is this', '', '', '', '')",
+        "('', 'How fast', 'fast', '', '')"
+      ],
+      "question_count": 3,
+      "sentiment": {
+        "positive_count": 6,
+        "negative_count": 2,
+        "top_positive_snippets": [
+          "Charges my MacBook Pro amazingly fast — 50% in 30 minutes with the PD output. Love the aluminum build.",
+          "Does it work on airplanes? I need it for international travel and layovers.",
+          "Is this waterproof? I want to use it camping near lakes and rivers."
+        ],
+        "top_negative_snippets": [
+          "Stopped working after 3 weeks. The USB-C port feels loose and cheap. Disappointing.",
+          "Misleading capacity — doesn't actually deliver 20000mAh to the device due to conversion loss."
+        ],
+        "recurring_negative_keywords": {
+          "stopped working": 1,
+          "cheap": 1,
+          "disappointing": 1,
+          "misleading": 1
+        }
+      }
+    },
+    "qa_seeding": {
+      "qa_pairs": [
+        {
+          "question": "Is this product allowed on airplanes?",
+          "answer": "Yes, this product meets FAA regulations for carry-on. Battery capacity is within the 100Wh limit.",
+          "template_key": "airplane"
+        },
+        {
+          "question": "Is it waterproof or water-resistant?",
+          "answer": "This product carries an IPX5 waterproof rating, suitable for splashing and rain exposure.",
+          "template_key": "waterproof"
+        },
+        {
+          "question": "What is the warranty policy?",
+          "answer": "Covered by a 18-month manufacturer warranty. Contact our support team for replacements.",
+          "template_key": "warranty"
+        },
+        {
+          "question": "How long does it take to fully charge?",
+          "answer": "With PD fast charging, a full charge takes approximately 1.5 hours.",
+          "template_key": "charging_time"
+        },
+        {
+          "question": "Is it compatible with iPhone and Android?",
+          "answer": "Yes, works with all USB-C and USB-A devices including iPhone (via adapter), Android, and laptops.",
+          "template_key": "compatibility"
+        },
+        {
+          "question": "Can I charge two devices at the same time?",
+          "answer": "Yes, it supports simultaneous dual charging via USB-C and USB-A.",
+          "template_key": "competitor_derived"
+        },
+        {
+          "question": "Is this safe for airplane carry-on?",
+          "answer": "Yes, at 74Wh it's under the FAA 100Wh limit for carry-on lithium batteries.",
+          "template_key": "competitor_derived"
+        }
+      ],
+      "pair_count": 7
+    },
+    "recommendations": [
+      "Add a bullet explicitly stating build material and certification (e.g., 'Aircraft-grade aluminum chassis, drop-tested to MIL-STD-810G')",
+      "Verify all Title claims match backend attributes exactly (quantity, dimensions, included accessories)",
+      "Seed Q&A with warranty/return policy answer to intercept Rufus reliability queries"
+    ],
+    "scores": {
+      "qa_coverage_pct": 0.0,
+      "grade": "F",
+      "proof_nodes_seeded": 7
+    }
+  },
+  "skill_04": {
+    "skill_id": "04",
+    "skill_name": "Multimodal Visual SEO Validation",
+    "asin": "B0EXAMPLE_POWERBANK",
+    "image_reports": [
+      {
+        "filename": "main_product.jpg",
+        "image_type": "main",
+        "alt_text": {
+          "original": "product image 1",
+          "optimized": "VoltCharge PowerCore 20000mAh Portable Power Bank — USB-C PD 65W Fast Charging for iPhone, Android, MacBook, Camping Travel Portable power bank with 20000mah capability for enhanced user experience — clean studio shot showing primary product view on white background",
+          "score": {
+            "is_generic": true,
+            "length": 15,
+            "noun_phrase_hits": 0,
+            "score": 0.0,
+            "grade": "F"
+          }
+        },
+        "ocr_audit": {
+          "has_ocr_text": false,
+          "np_coverage": 0,
+          "missing_phrases": [
+            "Portable power bank with 20000mah capability for enhanced user experience",
+            "Fast charging power bank usb with c capability for enhanced user experience",
+            "portable charger that delivers superior performance for camping"
+          ]
+        },
+        "ocr_tips": []
+      },
+      {
+        "filename": "specs_infographic.jpg",
+        "image_type": "infographic",
+        "alt_text": {
+          "original": "Power bank specs showing PD 65W output and 20000mAh capacity",
+          "optimized": "VoltCharge PowerCore 20000mAh Portable Power Bank — USB-C PD 65W Fast Charging for iPhone, Android, MacBook, Camping Travel Portable power bank with 20000mah capability for enhanced user experience — callout annotations showing technical specifications and key features",
+          "score": {
+            "is_generic": false,
+            "length": 60,
+            "noun_phrase_hits": 0,
+            "score": 3.6,
+            "grade": "F"
+          }
+        },
+        "ocr_audit": {
+          "has_ocr_text": true,
+          "np_coverage_pct": 0.0,
+          "present_phrases": [],
+          "missing_phrases": [
+            "Portable power bank with 20000mah capability for enhanced user experience",
+            "Fast charging power bank usb with c capability for enhanced user experience",
+            "portable charger that delivers superior performance for camping"
+          ]
+        },
+        "ocr_tips": [
+          "Use dark text (#1A1A1A or similar) on light backgrounds (≥4.5:1 contrast ratio)",
+          "Use font size ≥ 24px for overlay text to ensure OCR legibility",
+          "Prefer sans-serif fonts (e.g., Helvetica, Inter) for machine readability",
+          "Keep text blocks to ≤ 6 words per line to avoid OCR fragmentation"
+        ]
+      },
+      {
+        "filename": "camping_lifestyle.jpg",
+        "image_type": "lifestyle",
+        "alt_text": {
+          "original": "Portable power bank used for camping in a forest setting at night",
+          "optimized": "VoltCharge PowerCore 20000mAh Portable Power Bank — USB-C PD 65W Fast Charging for iPhone, Android, MacBook, Camping Travel Portable power bank with 20000mah capability for enhanced user experience — user interacting with product showing product in real-world use environment",
+          "score": {
+            "is_generic": false,
+            "length": 65,
+            "noun_phrase_hits": 0,
+            "score": 3.9,
+            "grade": "F"
+          }
+        },
+        "ocr_audit": {
+          "has_ocr_text": false,
+          "np_coverage": 0,
+          "missing_phrases": [
+            "Portable power bank with 20000mah capability for enhanced user experience",
+            "Fast charging power bank usb with c capability for enhanced user experience",
+            "portable charger that delivers superior performance for camping"
+          ]
+        },
+        "ocr_tips": []
+      },
+      {
+        "filename": "size_comparison.jpg",
+        "image_type": "infographic",
+        "alt_text": {
+          "original": "Size comparison of VoltCharge power bank next to iPhone and MacBook",
+          "optimized": "VoltCharge PowerCore 20000mAh Portable Power Bank — USB-C PD 65W Fast Charging for iPhone, Android, MacBook, Camping Travel Portable power bank with 20000mah capability for enhanced user experience — callout annotations showing technical specifications and key features",
+          "score": {
+            "is_generic": false,
+            "length": 67,
+            "noun_phrase_hits": 0,
+            "score": 4.0,
+            "grade": "F"
+          }
+        },
+        "ocr_audit": {
+          "has_ocr_text": true,
+          "np_coverage_pct": 0.0,
+          "present_phrases": [],
+          "missing_phrases": [
+            "Portable power bank with 20000mah capability for enhanced user experience",
+            "Fast charging power bank usb with c capability for enhanced user experience",
+            "portable charger that delivers superior performance for camping"
+          ]
+        },
+        "ocr_tips": [
+          "Use dark text (#1A1A1A or similar) on light backgrounds (≥4.5:1 contrast ratio)",
+          "Use font size ≥ 24px for overlay text to ensure OCR legibility",
+          "Prefer sans-serif fonts (e.g., Helvetica, Inter) for machine readability",
+          "Keep text blocks to ≤ 6 words per line to avoid OCR fragmentation"
+        ]
+      },
+      {
+        "filename": "video_thumb_camping.jpg",
+        "image_type": "video_thumb",
+        "alt_text": {
+          "original": "camping power bank video thumbnail",
+          "optimized": "VoltCharge PowerCore 20000mAh Portable Power Bank — USB-C PD 65W Fast Charging for iPhone, Android, MacBook, Camping Travel Portable power bank with 20000mah capability for enhanced user experience — video thumbnail showing product demonstration in action",
+          "score": {
+            "is_generic": true,
+            "length": 34,
+            "noun_phrase_hits": 0,
+            "score": 0.0,
+            "grade": "F"
+          }
+        },
+        "ocr_audit": {
+          "has_ocr_text": false,
+          "np_coverage": 0,
+          "missing_phrases": [
+            "Portable power bank with 20000mah capability for enhanced user experience",
+            "Fast charging power bank usb with c capability for enhanced user experience",
+            "portable charger that delivers superior performance for camping"
+          ]
+        },
+        "ocr_tips": []
+      }
+    ],
+    "summary": {
+      "total_images": 5,
+      "generic_alt_text_count": 2,
+      "infographics_audited": 2,
+      "ocr_tips": [
+        "Use dark text (#1A1A1A or similar) on light backgrounds (≥4.5:1 contrast ratio)",
+        "Use font size ≥ 24px for overlay text to ensure OCR legibility",
+        "Prefer sans-serif fonts (e.g., Helvetica, Inter) for machine readability",
+        "Keep text blocks to ≤ 6 words per line to avoid OCR fragmentation"
+      ]
+    },
+    "scores": {
+      "average_alt_text_score": 2.3,
+      "grade": "F",
+      "images_needing_update": 2
+    }
+  },
+  "skill_05": {
+    "skill_id": "05",
+    "skill_name": "A+ Knowledge Base Engineering",
+    "asin": "B0EXAMPLE_POWERBANK",
+    "comparison_table_audit": {
+      "has_table": true,
+      "semantic_headers_found": [
+        "waterproof rating",
+        "charging speed",
+        "weight",
+        "capacity"
+      ],
+      "semantic_headers_missing": [
+        "battery life",
+        "dimensions",
+        "compatibility",
+        "warranty",
+        "material"
+      ],
+      "semantic_header_score": 33.3,
+      "specific_data_ratio": 66.7,
+      "recommendations": [
+        "Add these semantic headers: battery life, dimensions, compatibility"
+      ]
+    },
+    "module_audit": {
+      "module_count": 4,
+      "module_types": [
+        "comparison_table",
+        "faq",
+        "technical_specs",
+        "lifestyle_image"
+      ],
+      "has_knowledge_base_module": true,
+      "missing_kb_modules": []
+    },
+    "hallucination_risk": {
+      "vague_claims_found": [
+        "fast charging"
+      ],
+      "specific_data_anchors": 15,
+      "hallucination_risk_score": 92.5,
+      "risk_level": "LOW"
+    },
+    "scores": {
+      "composite_aplus_score": 71.1,
+      "grade": "C"
+    }
+  },
+  "skill_06": {
+    "skill_id": "06",
+    "skill_name": "Mobile Habitat Optimization",
+    "asin": "B0EXAMPLE_POWERBANK",
+    "title_analysis": {
+      "original_title": "VoltCharge PowerCore 20000mAh Portable Power Bank — USB-C PD 65W Fast Charging for iPhone, Android, MacBook, Camping Travel",
+      "char_count": 123,
+      "rufus_chat_preview": "VoltCharge PowerCore 20000mAh Portable Power Bank — USB-C PD 65W Fast…",
+      "opens_with_category": true,
+      "category_keywords_in_first_70": [
+        "power bank"
+      ],
+      "filler_openers_detected": [],
+      "optimized_title_suggestion": "",
+      "title_score": 90.0
+    },
+    "video_analysis": [
+      {
+        "video_title": "Stop struggling with dead batteries while camping — VoltCharge PowerCore 20000",
+        "aspect_ratio": "9:16",
+        "is_vertical_9x16": true,
+        "has_problem_arc": true,
+        "has_solution_arc": true,
+        "has_ps_arc": true,
+        "video_score": 90.0,
+        "recommendations": []
+      },
+      {
+        "video_title": "VoltCharge PowerCore — product overview and features",
+        "aspect_ratio": "16:9",
+        "is_vertical_9x16": false,
+        "has_problem_arc": false,
+        "has_solution_arc": false,
+        "has_ps_arc": false,
+        "video_score": 0.0,
+        "recommendations": [
+          "Convert to 9:16 vertical format (mobile-first for Rufus carousel)",
+          "Open video with a customer pain point / problem scenario",
+          "Close video with clear solution narrative and product CTA"
+        ]
+      }
+    ],
+    "scores": {
+      "title_score": 90.0,
+      "video_avg_score": 45.0,
+      "composite_mobile_score": 72.0,
+      "grade": "C"
+    }
+  },
+  "skill_07": {
+    "skill_id": "07",
+    "skill_name": "Semantic Integrity & Anti-Optimization Check",
+    "asin": "B0EXAMPLE_POWERBANK",
+    "compliance_report": {
+      "keyword_stuffing": {
+        "stuffed_phrases": {
+          "usb c": 5
+        },
+        "stuffed_count": 1,
+        "legacy_seo_phrases": [],
+        "legacy_count": 0
+      },
+      "backend_conflicts": [],
+      "conflict_count": 0,
+      "unaddressed_negative_themes": [
+        {
+          "theme": "stopped working",
+          "recommendation": "Add warranty / reliability claim with proof (e.g., '50,000-cycle tested')"
+        },
+        {
+          "theme": "cheap",
+          "recommendation": "Add a bullet about material certification or manufacturing standard"
+        },
+        {
+          "theme": "disappointing",
+          "recommendation": "Address 'disappointing' concern explicitly in a bullet point or Q&A"
+        },
+        {
+          "theme": "misleading",
+          "recommendation": "Audit title claims vs backend for exact quantity/spec consistency"
+        }
+      ]
+    },
+    "sanitized_listing": {
+      "sanitized_title": "VoltCharge PowerCore 20000mAh Portable Power Bank — USB-C PD 65W Fast Charging for iPhone, Android, MacBook, Camping Travel",
+      "sanitized_bullets": [
+        "Designed for 20000mAh high-capacity portable power bank charges iPhone 15 Pro Max 4.5 times, Samsung Galaxy S24 3.8 times, or MacBook Air once on a single charge",
+        "Built for 65W USB-C PD 3.0 fast charging output — charge your MacBook Pro to 50% in just 30 minutes, with simultaneous 3-device charging via USB-C + dual USB-A ports",
+        "Ideal when IPX5 water-resistant with aircraft-grade aluminum chassis and drop-tested to MIL-STD-810G — built for camping, hiking, and travel adventures",
+        "Perfect for TSA-approved 74Wh battery meets FAA carry-on regulations — LED percentage display shows exact remaining power at a glance",
+        "Engineered to What's in the box: VoltCharge PowerCore 20000, USB-C to USB-C cable, travel pouch, quick start guide, and 18-month manufacturer warranty"
+      ],
+      "phrases_removed": [
+        "usb c"
+      ]
+    },
+    "scores": {
+      "integrity_score": 71.0,
+      "grade": "C",
+      "issues_found": 5
+    }
+  },
+  "asin": "B0EXAMPLE_POWERBANK",
+  "product": "VoltCharge PowerCore 20000mAh Portable Power Bank — USB-C PD 65W Fast Charging for iPhone, Android, MacBook, Camping Travel",
+  "skill_08": {
+    "skill_id": "08",
+    "skill_name": "Visual Report Generator",
+    "asin": "B0EXAMPLE_POWERBANK",
+    "report_html_length": 30155,
+    "report_date": "March 5, 2026",
+    "grades": {
+      "skill_01_taxonomy": "A",
+      "skill_02_npo": "F",
+      "skill_03_ugc": "F",
+      "skill_04_visual_seo": "F",
+      "skill_05_aplus": "C",
+      "skill_06_mobile": "C",
+      "skill_07_integrity": "C"
+    },
+    "report_path": "results/pipeline_report.html"
+  }
+}

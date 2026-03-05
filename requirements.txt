@@ -1,0 +1,39 @@
+# Rufus Optimization Skills Library — Requirements
+# All dependencies for the 7 skill scripts + utils
+# Compatible with Python 3.9+
+
+# ---------------------------------------------------------------------------
+# Core Standard Library (no install needed — listed for documentation)
+# ---------------------------------------------------------------------------
+# json       — JSON I/O
+# re         — regex pattern matching
+# sys        — CLI / stdin integration
+# pathlib    — cross-platform file paths
+# argparse   — CLI argument parsing
+# unicodedata — Unicode text normalization
+# datetime   — timestamped logging
+# collections — Counter for frequency analysis
+
+# ---------------------------------------------------------------------------
+# Optional: Enhanced NLP (for LLM-backed NPO in Skill02)
+# Uncomment to enable transformer-powered noun phrase generation:
+# ---------------------------------------------------------------------------
+# transformers>=4.40.0
+# torch>=2.1.0
+
+# ---------------------------------------------------------------------------
+# Optional: Amazon SP-API integration (real CLR / flat-file upload)
+# ---------------------------------------------------------------------------
+# python-amazon-sp-api>=1.0.0
+
+# ---------------------------------------------------------------------------
+# Optional: HTTP API wrapper (for n8n HTTP node integration)
+# ---------------------------------------------------------------------------
+# fastapi>=0.111.0
+# uvicorn>=0.30.0
+
+# ---------------------------------------------------------------------------
+# Development & Testing
+# ---------------------------------------------------------------------------
+pytest>=8.0.0
+pytest-cov>=5.0.0

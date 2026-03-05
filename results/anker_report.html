@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rufus Optimization Report — Anker Nano Power Bank</title>
+<style>
+  :root {
+    --green: #22c55e; --green-bg: #dcfce7;
+    --yellow: #eab308; --yellow-bg: #fef9c3;
+    --red: #ef4444; --red-bg: #fee2e2;
+    --blue: #3b82f6; --blue-bg: #dbeafe;
+    --gray: #6b7280; --gray-bg: #f3f4f6;
+    --dark: #111827; --body-bg: #f8fafc;
+    --card: #ffffff; --border: #e5e7eb;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--body-bg); color: var(--dark); line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+
+  /* Header */
+  .header { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: #fff; padding: 48px 40px; border-radius: 16px; margin-bottom: 32px; }
+  .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+  .header .subtitle { font-size: 15px; color: #94a3b8; margin-bottom: 20px; }
+  .header-meta { display: flex; gap: 32px; flex-wrap: wrap; font-size: 14px; color: #cbd5e1; }
+  .header-meta span { display: flex; align-items: center; gap: 6px; }
+  .header-meta .label { color: #94a3b8; }
+
+  /* Grade Overview Strip */
+  .grade-strip { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; margin-bottom: 32px; }
+  .grade-card { background: var(--card); border-radius: 12px; padding: 20px 12px; text-align: center; border: 1px solid var(--border); transition: transform 0.15s; }
+  .grade-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  .grade-card .skill-num { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); margin-bottom: 8px; }
+  .grade-card .grade { font-size: 36px; font-weight: 800; margin-bottom: 4px; }
+  .grade-card .skill-label { font-size: 12px; color: var(--gray); }
+  .grade-A { color: var(--green); }
+  .grade-B { color: #16a34a; }
+  .grade-C { color: var(--yellow); }
+  .grade-D { color: #f97316; }
+  .grade-F { color: var(--red); }
+
+  /* Score Bar */
+  .score-bar-wrap { margin: 12px 0; }
+  .score-bar-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px; }
+  .score-bar { height: 10px; background: #e5e7eb; border-radius: 5px; overflow: hidden; }
+  .score-bar-fill { height: 100%; border-radius: 5px; transition: width 0.5s ease; }
+  .fill-green { background: linear-gradient(90deg, #22c55e, #16a34a); }
+  .fill-yellow { background: linear-gradient(90deg, #eab308, #f59e0b); }
+  .fill-red { background: linear-gradient(90deg, #ef4444, #dc2626); }
+  .fill-blue { background: linear-gradient(90deg, #3b82f6, #2563eb); }
+
+  /* Section Card */
+  .section { background: var(--card); border-radius: 16px; border: 1px solid var(--border); padding: 32px; margin-bottom: 24px; }
+  .section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+  .section-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 800; color: #fff; flex-shrink: 0; }
+  .section h2 { font-size: 20px; font-weight: 700; }
+  .section h2 span { font-size: 14px; font-weight: 400; color: var(--gray); }
+
+  /* Tags */
+  .tag { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; margin: 2px 4px 2px 0; }
+  .tag-green { background: var(--green-bg); color: #166534; }
+  .tag-yellow { background: var(--yellow-bg); color: #854d0e; }
+  .tag-red { background: var(--red-bg); color: #991b1b; }
+  .tag-blue { background: var(--blue-bg); color: #1e40af; }
+  .tag-gray { background: var(--gray-bg); color: #374151; }
+
+  /* Tables */
+  .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  .data-table th { text-align: left; padding: 10px 12px; background: #f8fafc; border-bottom: 2px solid var(--border); font-weight: 600; color: var(--gray); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .data-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+  .data-table tr:last-child td { border-bottom: none; }
+
+  /* Callout box */
+  .callout { padding: 16px 20px; border-radius: 10px; margin: 16px 0; font-size: 14px; }
+  .callout-green { background: var(--green-bg); border-left: 4px solid var(--green); }
+  .callout-yellow { background: var(--yellow-bg); border-left: 4px solid var(--yellow); }
+  .callout-red { background: var(--red-bg); border-left: 4px solid var(--red); }
+  .callout-blue { background: var(--blue-bg); border-left: 4px solid var(--blue); }
+  .callout strong { font-weight: 700; }
+
+  /* Sentiment Donut */
+  .sentiment-row { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+  .donut-wrap { text-align: center; flex-shrink: 0; }
+  .donut-label { font-size: 13px; color: var(--gray); margin-top: 6px; }
+
+  /* Two-column layout */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 768px) {
+    .grade-strip { grid-template-columns: repeat(4, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+  }
+
+  /* Key stat */
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; margin: 16px 0; }
+  .stat-box { background: #f8fafc; border-radius: 10px; padding: 16px; text-align: center; }
+  .stat-box .stat-value { font-size: 28px; font-weight: 800; }
+  .stat-box .stat-label { font-size: 12px; color: var(--gray); margin-top: 4px; }
+
+  /* Image audit grid */
+  .img-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin: 16px 0; }
+  .img-card { background: #f8fafc; border-radius: 10px; padding: 14px; text-align: center; border: 1px solid var(--border); }
+  .img-card .img-icon { font-size: 32px; margin-bottom: 6px; }
+  .img-card .img-name { font-size: 11px; color: var(--gray); word-break: break-all; }
+  .img-card .img-grade { font-size: 24px; font-weight: 800; margin: 6px 0 2px; }
+  .img-card .img-type { font-size: 11px; }
+
+  /* Rufus preview */
+  .rufus-preview { background: #1e293b; color: #e2e8f0; padding: 16px 20px; border-radius: 12px; font-size: 15px; margin: 12px 0; font-family: 'SF Pro', -apple-system, sans-serif; }
+  .rufus-preview .rufus-label { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 32px; color: var(--gray); font-size: 13px; }
+
+  .list-disc { padding-left: 20px; margin: 8px 0; }
+  .list-disc li { margin-bottom: 6px; font-size: 14px; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+
+  /* Priority badge */
+  .priority { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .priority-critical { background: #fecaca; color: #991b1b; }
+  .priority-high { background: #fed7aa; color: #9a3412; }
+  .priority-medium { background: #fef08a; color: #854d0e; }
+  .priority-low { background: #d1fae5; color: #166534; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ===== HEADER ===== -->
+<div class="header">
+  <h1>Rufus AI Optimization Report</h1>
+  <div class="subtitle">Full 7-Skill Listing Audit &amp; Recommendations</div>
+  <div class="header-meta">
+    <span><strong>Anker Nano Power Bank, Ultra-Slim 5,000mAh Qi2 MagSafe-Compatible</strong></span>
+  </div>
+  <div class="header-meta" style="margin-top: 12px;">
+    <span><span class="label">ASIN:</span> B0FKN7X7HM</span>
+    <span><span class="label">Model:</span> A1665</span>
+    <span><span class="label">Market:</span> US (ATVPDKIKX0DER)</span>
+    <span><span class="label">Category:</span> Portable Power Banks</span>
+    <span><span class="label">Date:</span> March 4, 2026</span>
+  </div>
+</div>
+
+<!-- ===== GRADE OVERVIEW ===== -->
+<div class="grade-strip">
+  <div class="grade-card">
+    <div class="skill-num">Skill 01</div>
+    <div class="grade grade-A">A</div>
+    <div class="skill-label">Taxonomy</div>
+  </div>
+  <div class="grade-card">
+    <div class="skill-num">Skill 02</div>
+    <div class="grade grade-F">F</div>
+    <div class="skill-label">NPO Copy</div>
+  </div>
+  <div class="grade-card">
+    <div class="skill-num">Skill 03</div>
+    <div class="grade grade-F">F</div>
+    <div class="skill-label">UGC / Q&amp;A</div>
+  </div>
+  <div class="grade-card">
+    <div class="skill-num">Skill 04</div>
+    <div class="grade grade-F">F</div>
+    <div class="skill-label">Visual SEO</div>
+  </div>
+  <div class="grade-card">
+    <div class="skill-num">Skill 05</div>
+    <div class="grade grade-C">C</div>
+    <div class="skill-label">A+ Content</div>
+  </div>
+  <div class="grade-card">
+    <div class="skill-num">Skill 06</div>
+    <div class="grade grade-A">A</div>
+    <div class="skill-label">Mobile</div>
+  </div>
+  <div class="grade-card">
+    <div class="skill-num">Skill 07</div>
+    <div class="grade grade-C">C</div>
+    <div class="skill-label">Integrity</div>
+  </div>
+</div>
+
+<!-- ===== SKILL 01: TAXONOMY ===== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);">01</div>
+    <div>
+      <h2>Structured Taxonomy &amp; Attribute Injection <span>— Grade A</span></h2>
+      <div style="font-size:14px; color:#6b7280;">Backend attribute completeness &amp; Amazon Knowledge Graph alignment</div>
+    </div>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-box"><div class="stat-value" style="color:var(--green)">98.8%</div><div class="stat-label">Completeness</div></div>
+    <div class="stat-box"><div class="stat-value">81</div><div class="stat-label">High-Confidence Tokens</div></div>
+    <div class="stat-box"><div class="stat-value">1</div><div class="stat-label">Null Fields</div></div>
+    <div class="stat-box"><div class="stat-value">0</div><div class="stat-label">Values Standardized</div></div>
+  </div>
+
+  <div class="score-bar-wrap">
+    <div class="score-bar-label"><span>Backend Completeness</span><span>98.8%</span></div>
+    <div class="score-bar"><div class="score-bar-fill fill-green" style="width:98.8%"></div></div>
+  </div>
+
+  <div class="callout callout-green">
+    <strong>Excellent.</strong> Only 1 field is empty: <code>waterproof_rating</code> — this is expected since the Anker Nano doesn't carry a waterproof/IP rating. All 80 other backend attributes are populated with valid values. No creative values needed standardization (color "Black" and material "Polycarbonate" are already Amazon-standard).
+  </div>
+
+  <div class="callout callout-blue">
+    <strong>Knowledge Graph:</strong> No use-case mappings were triggered. Consider adding "travel" or "commute" to the <code>recommended_uses_for_product</code> backend field to activate Rufus Knowledge Graph node chains for travel-related queries.
+  </div>
+</div>
+
+<!-- ===== SKILL 02: NPO ===== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">02</div>
+    <div>
+      <h2>Noun Phrase Optimization &amp; RAG Copy <span>— Grade F</span></h2>
+      <div style="font-size:14px; color:#6b7280;">Keyword density &amp; Rufus-ready bullet copy assessment</div>
+    </div>
+  </div>
+
+  <div class="callout callout-yellow">
+    <strong>Why F?</strong> The density scorer checks whether the <em>generated</em> noun phrases appear verbatim inside the bullet text. Since Anker's real bullets use natural marketing copy (not formula-generated text), the density match is 0%. <strong>This is a scoring calibration issue, not a content quality issue.</strong> Anker's bullets are well-written with specific data points.
+  </div>
+
+  <div style="margin-top:16px;">
+    <strong>Title Analysis</strong>
+    <div class="rufus-preview">
+      <div class="rufus-label">Rufus Chat Preview (first 70 chars)</div>
+      Anker Nano Power Bank, Ultra-Slim 5,000mAh Magnetic Wireless Charging&hellip;
+    </div>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-box"><div class="stat-value">183</div><div class="stat-label">Title Characters</div></div>
+    <div class="stat-box"><div class="stat-value" style="color:var(--green)">Yes</div><div class="stat-label">Opens with Category</div></div>
+    <div class="stat-box"><div class="stat-value">7</div><div class="stat-label">NPO Phrases Generated</div></div>
+    <div class="stat-box"><div class="stat-value">0</div><div class="stat-label">Filler Words Found</div></div>
+  </div>
+
+  <h4 style="margin-top: 16px; font-size: 14px; color: var(--gray);">Generated Noun Phrases (for downstream skills)</h4>
+  <div style="margin-top: 8px;">
+    <span class="tag tag-blue">magsafe power bank</span>
+    <span class="tag tag-blue">slim magnetic portable charger</span>
+    <span class="tag tag-blue">qi2 wireless power bank iphone</span>
+    <span class="tag tag-blue">anker magsafe battery pack</span>
+    <span class="tag tag-blue">ultra thin power bank for iphone 16</span>
+    <span class="tag tag-blue">magnetic wireless charger portable</span>
+    <span class="tag tag-blue">5000mah magsafe charger slim</span>
+  </div>
+</div>
+
+<!-- ===== SKILL 03: UGC ===== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">03</div>
+    <div>
+      <h2>UGC Ground Truth Mining &amp; Q&amp;A Seeding <span>— Grade F</span></h2>
+      <div style="font-size:14px; color:#6b7280;">Customer review sentiment, question extraction &amp; Q&amp;A pair generation</div>
+    </div>
+  </div>
+
+  <div class="callout callout-yellow">
+    <strong>Why F?</strong> The coverage scorer measures how well the existing listing copy addresses the mined questions. The F grade means the listing's bullets and backend don't yet explicitly answer the customer questions extracted from reviews. The Q&amp;A pairs were successfully generated (8 pairs) — they just haven't been seeded into the listing yet.
+  </div>
+
+  <div class="two-col" style="margin-top: 20px;">
+    <div>
+      <h4 style="font-size: 14px; color: var(--gray); margin-bottom: 12px;">Customer Sentiment Breakdown</h4>
+      <div class="stat-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="stat-box"><div class="stat-value" style="color:var(--green)">6</div><div class="stat-label">Positive (4-5 star)</div></div>
+        <div class="stat-box"><div class="stat-value" style="color:var(--gray)">3</div><div class="stat-label">Neutral (3 star)</div></div>
+        <div class="stat-box"><div class="stat-value" style="color:var(--red)">3</div><div class="stat-label">Negative (1-2 star)</div></div>
+      </div>
+
+      <h4 style="font-size: 14px; color: var(--gray); margin-top: 20px; margin-bottom: 8px;">Recurring Negative Themes</h4>
+      <span class="tag tag-red">stopped working</span>
+      <span class="tag tag-red">disappointing</span>
+      <span class="tag tag-red">misleading</span>
+      <span class="tag tag-red">doesn't work</span>
+    </div>
+    <div>
+      <h4 style="font-size: 14px; color: var(--gray); margin-bottom: 12px;">Questions Found in Reviews</h4>
+      <ul class="list-disc">
+        <li>"Does it work through a case?"</li>
+        <li>"Is this allowed on airplanes?"</li>
+        <li>"How fast does this charge my iPhone?"</li>
+      </ul>
+
+      <h4 style="font-size: 14px; color: var(--gray); margin-top: 20px; margin-bottom: 8px;">Q&amp;A Pairs Seeded</h4>
+      <div class="stat-box" style="display: inline-block;">
+        <div class="stat-value" style="color:var(--blue)">8</div>
+        <div class="stat-label">Ready-to-Seed Pairs</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <h4 style="font-size: 14px; color: var(--gray); margin-bottom: 8px;">Top Negative Review Snippets</h4>
+  <div class="callout callout-red" style="margin-bottom:8px;">
+    <strong>"USB-C port stopped working after 2 months."</strong> Wireless charging still works but disappointing for the price. <span class="tag tag-red" style="margin-left:8px;">1-2 stars</span>
+  </div>
+  <div class="callout callout-red" style="margin-bottom:8px;">
+    <strong>"Misleading capacity"</strong> — says 5000mAh but only ~3000mAh usable due to wireless efficiency loss. <span class="tag tag-red" style="margin-left:8px;">1-2 stars</span>
+  </div>
+  <div class="callout callout-red">
+    <strong>"Doesn't work with iPhone 12 mini"</strong> — listing not clear about compatibility. <span class="tag tag-red" style="margin-left:8px;">1 star</span>
+  </div>
+
+  <div class="callout callout-blue" style="margin-top: 16px;">
+    <strong>Recommendation:</strong> Seed the Q&amp;A section with answers addressing: (1) real-world capacity vs. rated capacity, (2) specific incompatible models, and (3) USB-C port reliability + warranty coverage.
+  </div>
+</div>
+
+<!-- ===== SKILL 04: VISUAL SEO ===== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">04</div>
+    <div>
+      <h2>Multimodal Visual SEO Validation <span>— Grade F</span></h2>
+      <div style="font-size:14px; color:#6b7280;">Image alt-text quality, OCR audit &amp; infographic noun-phrase coverage</div>
+    </div>
+  </div>
+
+  <div class="callout callout-yellow">
+    <strong>Why F?</strong> This skill audits alt-text quality and OCR text on infographic images. Without direct access to the actual Amazon listing images, we used estimated metadata. The alt-text scores are low because the current alt-text is too short/generic. <strong>In production, this skill works best with actual image alt-text and OCR text extracted from real infographic overlays.</strong>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-box"><div class="stat-value">5</div><div class="stat-label">Total Images</div></div>
+    <div class="stat-box"><div class="stat-value" style="color:var(--red)">2</div><div class="stat-label">Generic Alt-Text</div></div>
+    <div class="stat-box"><div class="stat-value">3</div><div class="stat-label">Infographics Audited</div></div>
+    <div class="stat-box"><div class="stat-value" style="color:var(--red)">2.4</div><div class="stat-label">Avg Alt-Text Score</div></div>
+  </div>
+
+  <h4 style="font-size: 14px; color: var(--gray); margin: 16px 0 8px;">Image-by-Image Audit</h4>
+  <div class="img-grid">
+    <div class="img-card">
+      <div class="img-icon">🖼️</div>
+      <div class="img-grade grade-F">F</div>
+      <div class="img-type"><span class="tag tag-gray">main</span></div>
+      <div class="img-name">main product shot</div>
+      <div style="font-size:11px; color:var(--red); margin-top:4px;">Generic alt-text</div>
+    </div>
+    <div class="img-card">
+      <div class="img-icon">📊</div>
+      <div class="img-grade grade-F">F</div>
+      <div class="img-type"><span class="tag tag-blue">infographic</span></div>
+      <div class="img-name">specs infographic</div>
+      <div style="font-size:11px; color:var(--yellow); margin-top:4px;">OCR: 5 phrases detected</div>
+    </div>
+    <div class="img-card">
+      <div class="img-icon">🏕️</div>
+      <div class="img-grade grade-F">F</div>
+      <div class="img-type"><span class="tag tag-green">lifestyle</span></div>
+      <div class="img-name">lifestyle w/ phone</div>
+      <div style="font-size:11px; color:var(--gray); margin-top:4px;">No OCR text</div>
+    </div>
+    <div class="img-card">
+      <div class="img-icon">🌡️</div>
+      <div class="img-grade grade-F">F</div>
+      <div class="img-type"><span class="tag tag-blue">infographic</span></div>
+      <div class="img-name">cooling comparison</div>
+      <div style="font-size:11px; color:var(--yellow); margin-top:4px;">OCR: 4 phrases detected</div>
+    </div>
+    <div class="img-card">
+      <div class="img-icon">📱</div>
+      <div class="img-grade grade-F">F</div>
+      <div class="img-type"><span class="tag tag-blue">infographic</span></div>
+      <div class="img-name">compatibility chart</div>
+      <div style="font-size:11px; color:var(--red); margin-top:4px;">Generic alt-text</div>
+    </div>
+  </div>
+
+  <h4 style="font-size: 14px; color: var(--gray); margin: 16px 0 8px;">OCR Best Practices for Infographics</h4>
+  <ul class="list-disc">
+    <li>Use dark text (#1A1A1A) on light backgrounds — minimum 4.5:1 contrast ratio</li>
+    <li>Font size 24px+ for overlay text to ensure OCR can read it</li>
+    <li>Sans-serif fonts (Helvetica, Inter) for machine readability</li>
+    <li>Keep text blocks to 6 words or fewer per line</li>
+  </ul>
+</div>
+
+<!-- ===== SKILL 05: A+ ===== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background: linear-gradient(135deg, #eab308, #f59e0b);">05</div>
+    <div>
+      <h2>A+ Knowledge Base Engineering <span>— Grade C</span></h2>
+      <div style="font-size:14px; color:#6b7280;">Comparison table semantics, module audit &amp; hallucination risk</div>
+    </div>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-box"><div class="stat-value" style="color:var(--yellow)">67.8</div><div class="stat-label">Composite A+ Score</div></div>
+    <div class="stat-box"><div class="stat-value" style="color:var(--green)">LOW</div><div class="stat-label">Hallucination Risk</div></div>
+    <div class="stat-box"><div class="stat-value">88.9%</div><div class="stat-label">Specific Data Ratio</div></div>
+    <div class="stat-box"><div class="stat-value">3</div><div class="stat-label">A+ Modules</div></div>
+  </div>
+
+  <div class="two-col" style="margin-top: 20px;">
+    <div>
+      <h4 style="font-size: 14px; color: var(--gray); margin-bottom: 12px;">Comparison Table Headers</h4>
+      <div class="score-bar-wrap">
+        <div class="score-bar-label"><span>Semantic Header Coverage</span><span>25%</span></div>
+        <div class="score-bar"><div class="score-bar-fill fill-red" style="width:25%"></div></div>
+      </div>
+      <div style="margin-top: 12px;">
+        <strong style="font-size:13px;">Found:</strong><br>
+        <span class="tag tag-green">charging speed</span>
+        <span class="tag tag-green">weight</span>
+        <span class="tag tag-green">capacity</span>
+      </div>
+      <div style="margin-top: 8px;">
+        <strong style="font-size:13px;">Missing:</strong><br>
+        <span class="tag tag-red">battery life</span>
+        <span class="tag tag-red">dimensions</span>
+        <span class="tag tag-red">compatibility</span>
+        <span class="tag tag-red">warranty</span>
+        <span class="tag tag-red">waterproof rating</span>
+      </div>
+    </div>
+    <div>
+      <h4 style="font-size: 14px; color: var(--gray); margin-bottom: 12px;">Module Audit</h4>
+      <table class="data-table">
+        <tr><th>Module Type</th><th>Status</th></tr>
+        <tr><td>Comparison Table</td><td><span class="tag tag-green">Present</span></td></tr>
+        <tr><td>FAQ</td><td><span class="tag tag-green">Present</span></td></tr>
+        <tr><td>Lifestyle Image</td><td><span class="tag tag-green">Present</span></td></tr>
+        <tr><td>Technical Specs</td><td><span class="tag tag-red">Missing</span></td></tr>
+      </table>
+
+      <h4 style="font-size: 14px; color: var(--gray); margin: 16px 0 8px;">Vague Claims Flagged</h4>
+      <span class="tag tag-yellow">fast charging</span>
+      <div style="font-size: 12px; color: var(--gray); margin-top: 4px;">Replace with: "15W Qi2 wireless" or "20W USB-C PD"</div>
+    </div>
+  </div>
+
+  <div class="callout callout-blue" style="margin-top: 16px;">
+    <strong>Recommendations:</strong> (1) Add "dimensions", "compatibility", and "warranty" columns to the comparison table. (2) Add a Technical Specs module with raw specifications. (3) Replace vague "fast charging" with specific wattage claims in all A+ copy.
+  </div>
+</div>
+
+<!-- ===== SKILL 06: MOBILE ===== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background: linear-gradient(135deg, #22c55e, #16a34a);">06</div>
+    <div>
+      <h2>Mobile Habitat Optimization <span>— Grade A</span></h2>
+      <div style="font-size:14px; color:#6b7280;">Rufus chat preview, mobile-first title &amp; video arc analysis</div>
+    </div>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-box"><div class="stat-value" style="color:var(--green)">90</div><div class="stat-label">Title Score</div></div>
+    <div class="stat-box"><div class="stat-value" style="color:var(--green)">90</div><div class="stat-label">Video Score</div></div>
+    <div class="stat-box"><div class="stat-value" style="color:var(--green)">90</div><div class="stat-label">Composite Score</div></div>
+    <div class="stat-box"><div class="stat-value">183</div><div class="stat-label">Title Characters</div></div>
+  </div>
+
+  <div class="rufus-preview">
+    <div class="rufus-label">How Rufus Shows This Title in Chat</div>
+    Anker Nano Power Bank, Ultra-Slim 5,000mAh Magnetic Wireless Charging&hellip;
+  </div>
+
+  <div class="callout callout-green">
+    <strong>Title Analysis:</strong> Opens with category keyword "Power Bank" (important for Rufus matching). No filler openers detected. At 183 chars it's slightly long but the first 70 characters capture brand + capacity + key differentiator perfectly.
+  </div>
+
+  <h4 style="font-size: 14px; color: var(--gray); margin: 16px 0 8px;">Video Analysis</h4>
+  <table class="data-table">
+    <tr><th>Video</th><th>Format</th><th>Problem Arc</th><th>Solution Arc</th><th>Score</th></tr>
+    <tr>
+      <td style="font-size:13px;">"Stop settling for bulky MagSafe batteries"</td>
+      <td><span class="tag tag-green">9:16 Vertical</span></td>
+      <td><span class="tag tag-green">Yes</span></td>
+      <td><span class="tag tag-green">Yes</span></td>
+      <td><strong style="color:var(--green)">90</strong></td>
+    </tr>
+  </table>
+</div>
+
+<!-- ===== SKILL 07: INTEGRITY ===== -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-icon" style="background: linear-gradient(135deg, #eab308, #f59e0b);">07</div>
+    <div>
+      <h2>Semantic Integrity &amp; Anti-Optimization <span>— Grade C</span></h2>
+      <div style="font-size:14px; color:#6b7280;">Keyword stuffing, backend conflicts &amp; negative theme coverage</div>
+    </div>
+  </div>
+
+  <div class="score-bar-wrap">
+    <div class="score-bar-label"><span>Integrity Score</span><span>66 / 100</span></div>
+    <div class="score-bar"><div class="score-bar-fill fill-yellow" style="width:66%"></div></div>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-box"><div class="stat-value" style="color:var(--yellow)">66</div><div class="stat-label">Integrity Score</div></div>
+    <div class="stat-box"><div class="stat-value" style="color:var(--red)">6</div><div class="stat-label">Total Issues</div></div>
+    <div class="stat-box"><div class="stat-value" style="color:var(--green)">0</div><div class="stat-label">Backend Conflicts</div></div>
+    <div class="stat-box"><div class="stat-value" style="color:var(--green)">0</div><div class="stat-label">Legacy SEO Spam</div></div>
+  </div>
+
+  <div class="two-col" style="margin-top: 20px;">
+    <div>
+      <h4 style="font-size: 14px; color: var(--gray); margin-bottom: 12px;">Keyword Stuffing Detected</h4>
+      <table class="data-table">
+        <tr><th>Phrase</th><th>Occurrences</th><th>Severity</th></tr>
+        <tr>
+          <td><code>power bank</code></td>
+          <td>3x across title + bullets</td>
+          <td><span class="priority priority-medium">Medium</span></td>
+        </tr>
+        <tr>
+          <td><code>usb c</code></td>
+          <td>4x across title + bullets</td>
+          <td><span class="priority priority-medium">Medium</span></td>
+        </tr>
+      </table>
+      <div style="font-size: 12px; color: var(--gray); margin-top: 8px;">
+        Note: "power bank" 3x is borderline — it's also the product name, so some repetition is natural. "USB-C" 4x could be reduced by varying phrasing.
+      </div>
+    </div>
+    <div>
+      <h4 style="font-size: 14px; color: var(--gray); margin-bottom: 12px;">Unaddressed Negative Themes</h4>
+      <table class="data-table">
+        <tr><th>Theme</th><th>Action Required</th></tr>
+        <tr>
+          <td><span class="tag tag-red">stopped working</span></td>
+          <td style="font-size:13px;">Add warranty/reliability proof (e.g., "500-cycle tested")</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-red">misleading</span></td>
+          <td style="font-size:13px;">Clarify real-world capacity vs. rated mAh in bullets</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-red">disappointing</span></td>
+          <td style="font-size:13px;">Address capacity expectations in Q&amp;A</td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-red">doesn't work</span></td>
+          <td style="font-size:13px;">List incompatible models explicitly (12 mini, 13 mini, 16e)</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="callout callout-green" style="margin-top: 16px;">
+    <strong>Good news:</strong> Zero backend conflicts — all title claims (5000mAh, Qi2, USB-C) match the backend attributes exactly. No legacy SEO phrases ("best seller", "buy now", etc.) detected.
+  </div>
+</div>
+
+<!-- ===== ACTION PLAN ===== -->
+<div class="section" style="border: 2px solid var(--blue);">
+  <div class="section-header">
+    <div class="section-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">🎯</div>
+    <div>
+      <h2>Priority Action Plan</h2>
+      <div style="font-size:14px; color:#6b7280;">Top recommendations ranked by impact on Rufus optimization</div>
+    </div>
+  </div>
+
+  <table class="data-table">
+    <tr><th style="width:40px;">#</th><th>Action</th><th>Impact</th><th>Skills Affected</th></tr>
+    <tr>
+      <td><strong>1</strong></td>
+      <td>
+        <strong>Address "misleading capacity" concern</strong><br>
+        <span style="font-size:13px; color:var(--gray);">Add a bullet or Q&amp;A explaining that ~35-45% energy is lost in wireless conversion — 5000mAh delivers ~2750-3250mAh to device. This is the #1 negative theme.</span>
+      </td>
+      <td><span class="priority priority-critical">Critical</span></td>
+      <td><span class="tag tag-gray">S03</span> <span class="tag tag-gray">S07</span></td>
+    </tr>
+    <tr>
+      <td><strong>2</strong></td>
+      <td>
+        <strong>List incompatible models explicitly</strong><br>
+        <span style="font-size:13px; color:var(--gray);">State "Not compatible with iPhone 12 mini, 13 mini, or 16e" in both bullets and compatibility section to prevent negative reviews.</span>
+      </td>
+      <td><span class="priority priority-critical">Critical</span></td>
+      <td><span class="tag tag-gray">S03</span> <span class="tag tag-gray">S07</span></td>
+    </tr>
+    <tr>
+      <td><strong>3</strong></td>
+      <td>
+        <strong>Add Technical Specs module to A+ Content</strong><br>
+        <span style="font-size:13px; color:var(--gray);">Include a structured specs table with: 18.5Wh, 15W Qi2, 20W USB-C, 122g weight, 8.6mm thickness, FCC certified.</span>
+      </td>
+      <td><span class="priority priority-high">High</span></td>
+      <td><span class="tag tag-gray">S05</span></td>
+    </tr>
+    <tr>
+      <td><strong>4</strong></td>
+      <td>
+        <strong>Expand A+ comparison table headers</strong><br>
+        <span style="font-size:13px; color:var(--gray);">Add: dimensions, compatibility, warranty columns to increase semantic header coverage from 25% to 66%+.</span>
+      </td>
+      <td><span class="priority priority-high">High</span></td>
+      <td><span class="tag tag-gray">S05</span></td>
+    </tr>
+    <tr>
+      <td><strong>5</strong></td>
+      <td>
+        <strong>Seed Q&amp;A with 8 generated pairs</strong><br>
+        <span style="font-size:13px; color:var(--gray);">Especially: airplane safety (18.5Wh &lt; 100Wh FAA limit), case compatibility, charging speed expectations, and warranty policy (24-month).</span>
+      </td>
+      <td><span class="priority priority-high">High</span></td>
+      <td><span class="tag tag-gray">S03</span></td>
+    </tr>
+    <tr>
+      <td><strong>6</strong></td>
+      <td>
+        <strong>Add "travel" / "commute" to backend uses</strong><br>
+        <span style="font-size:13px; color:var(--gray);">Update <code>recommended_uses_for_product</code> to trigger Knowledge Graph node chains for travel-related Rufus queries.</span>
+      </td>
+      <td><span class="priority priority-medium">Medium</span></td>
+      <td><span class="tag tag-gray">S01</span></td>
+    </tr>
+    <tr>
+      <td><strong>7</strong></td>
+      <td>
+        <strong>Optimize image alt-text</strong><br>
+        <span style="font-size:13px; color:var(--gray);">Replace generic "Anker power bank black" with descriptive alt-text containing target noun phrases. Example: "Anker Nano 5000mAh MagSafe power bank — Qi2 certified slim magnetic wireless charger in black".</span>
+      </td>
+      <td><span class="priority priority-medium">Medium</span></td>
+      <td><span class="tag tag-gray">S04</span></td>
+    </tr>
+    <tr>
+      <td><strong>8</strong></td>
+      <td>
+        <strong>Reduce USB-C keyword repetition</strong><br>
+        <span style="font-size:13px; color:var(--gray);">Vary phrasing across bullets — use "Type-C", "wired output", or "USB-C PD" instead of repeating "USB-C" 4 times.</span>
+      </td>
+      <td><span class="priority priority-low">Low</span></td>
+      <td><span class="tag tag-gray">S07</span></td>
+    </tr>
+  </table>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer">
+  <div style="margin-bottom: 8px; font-weight: 600;">Rufus Optimization Skills Library v1.0</div>
+  <div>Generated March 4, 2026 &bull; Market: US (ATVPDKIKX0DER) &bull; ASIN: B0FKN7X7HM &bull; 7 Skills &bull; 161 Catalog Fields</div>
+  <div style="margin-top: 4px;">Pipeline runtime: 0.04s &bull; Powered by Anergy Academy</div>
+</div>
+
+</div>
+</body>
+</html>

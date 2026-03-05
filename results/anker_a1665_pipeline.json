@@ -1,0 +1,588 @@
+{
+  "asin": "B0FKN7X7HM",
+  "product": "Anker Nano Power Bank (5K, MagGo, Slim) — A1665",
+  "grades_summary": {
+    "skill_01_taxonomy": "A",
+    "skill_02_npo": "F",
+    "skill_03_ugc": "F",
+    "skill_04_visual_seo": "F",
+    "skill_05_aplus": "C",
+    "skill_06_mobile": "A",
+    "skill_07_integrity": "C"
+  },
+  "skill_01": {
+    "skill_id": "01",
+    "skill_name": "Structured Taxonomy & Attribute Injection",
+    "asin": "B0FKN7X7HM",
+    "audit": {
+      "null_fields": {
+        "waterproof_rating": "MISSING"
+      },
+      "null_count": 1,
+      "standardized_values": {},
+      "standardized_count": 0,
+      "knowledge_graph_mapping": {}
+    },
+    "injection_payload": {
+      "capacity_mah": 5000,
+      "energy_wh": 18.5,
+      "output_ports": 1,
+      "usb_c_output": "20W Max",
+      "wireless_output": "15W Qi2 MagSafe",
+      "usb_c_input": "20W Max",
+      "total_output": "20W max",
+      "weight_grams": 122,
+      "dimensions_inches": "4.0 x 2.8 x 0.34",
+      "thickness_mm": 8.6,
+      "charging_standard": "Qi2 + USB-C PD",
+      "battery_type": "Lithium Polymer",
+      "cell_count": 1,
+      "charge_cycles": 500,
+      "certifications": "FCC, CE, Qi2, MagSafe",
+      "material": "Polycarbonate + Soft-touch coating",
+      "magnet_type": "N52 NdFeB",
+      "cooling_system": "Graphene sheet + Dual NTC chips",
+      "led_indicator": "4-LED battery status",
+      "pass_through_charging": "Yes",
+      "tsa_approved": true,
+      "fcc_id": "2AOKB-A1665",
+      "operating_temp_c": "0 to 40",
+      "color_options": [
+        "Black",
+        "White",
+        "Blue",
+        "Rose"
+      ],
+      "feed_product_type": "ConsumerElectronics",
+      "item_sku": "ANKER-A1665-BLK",
+      "brand_name": "Anker",
+      "item_name": "Anker Nano Power Bank, Ultra-Slim 5,000mAh Magnetic Wireless Charging Battery, Qi2 Certified 15W Max MagSafe-Compatible Portable Charger, Ergonomic Design, for iPhone Air/17/16 Series",
+      "manufacturer": "Anker Innovations Limited",
+      "product_description": "The Anker Nano Power Bank (5K, MagGo, Slim) delivers 5,000mAh of portable power in an ultra-slim 0.34-inch / 8.6mm profile. Qi2-certified 15W MagSafe-compatible wireless charging plus 20W USB-C wired output. Graphene cooling with dual NTC temperature sensors keeps the device below 104°F during charging. Strong N52 magnets ensure secure MagSafe attachment. Compatible with iPhone 12/13/14/15/16 series and MagSafe cases.",
+      "item_type": "portable-power-bank",
+      "part_number": "A1665",
+      "model": "A1665",
+      "model_name": "Nano Power Bank (5K, MagGo, Slim)",
+      "external_product_id": "0194644182731",
+      "external_product_id_type": "UPC",
+      "standard_price": "54.99",
+      "main_image_url": "https://m.media-amazon.com/images/I/anker-a1665-main.jpg",
+      "color_name": "Black",
+      "color_map": "Black",
+      "recommended_uses_for_product": "Indoor/Outdoor",
+      "power_source_type": "Battery",
+      "voltage": "5",
+      "voltage_unit_of_measure": "Volts",
+      "connector_type": "USB-C",
+      "battery_capacity": "5000",
+      "battery_capacity_unit_of_measure": "milliamp_hours",
+      "number_of_ports": "1",
+      "reusability": "Rechargeable",
+      "battery_charge_time": "2",
+      "battery_charge_time_unit_of_measure": "Hours",
+      "compatible_devices": "iPhone 16 Pro, iPhone 16, iPhone 15, iPhone 14, iPhone 13, iPhone 12, AirPods Pro 2",
+      "special_features": "Qi2 Certified, MagSafe Compatible, Graphene Cooling, Ultra-Slim 0.34 inch",
+      "are_batteries_included": "Yes",
+      "batteries_required": "Yes",
+      "battery_cell_composition": "Lithium Polymer",
+      "lithium_battery_packaging": "Batteries contained in equipment",
+      "number_of_batteries": "1",
+      "number_of_lithium_ion_cells": "1",
+      "number_of_lithium_metal_cells": "0",
+      "lithium_battery_energy_content": "18.5",
+      "lithium_battery_energy_content_unit_of_measure": "Watt Hours",
+      "lithium_battery_weight": "90",
+      "lithium_battery_weight_unit_of_measure": "Grams",
+      "battery_weight": "90",
+      "battery_weight_unit_of_measure": "GR",
+      "item_weight": "122",
+      "item_weight_unit_of_measure": "Grams",
+      "country_of_origin": "China",
+      "has_less_than_30_percent_state_of_charge": "Yes",
+      "thickness_head_to_toe": "4.0",
+      "thickness_head_to_toe_unit_of_measure": "Inches",
+      "thickness_width_side_to_side": "2.8",
+      "thickness_width_side_to_side_unit_of_measure": "Inches",
+      "thickness_floor_to_top": "0.34",
+      "thickness_floor_to_top_unit_of_measure": "Inches",
+      "currency": "USD",
+      "condition_type": "New",
+      "fulfillment_center_id": "AMAZON_NA",
+      "quantity": "1",
+      "browse_tree": {
+        "category": "Cell Phones & Accessories",
+        "node_id": "2407749011",
+        "node_path": "Cell Phones & Accessories > Accessories > Chargers & Power Adapters > Portable Power Banks"
+      }
+    },
+    "scores": {
+      "completeness_pct": 98.8,
+      "grade": "A",
+      "high_confidence_tokens": 81
+    }
+  },
+  "skill_02": {
+    "skill_id": "02",
+    "skill_name": "Noun Phrase Optimization (NPO) & RAG-Ready Copy",
+    "asin": "B0FKN7X7HM",
+    "npo": {
+      "input_keywords": [
+        "magsafe power bank",
+        "slim magnetic portable charger",
+        "qi2 wireless power bank iphone",
+        "anker magsafe battery pack",
+        "ultra thin power bank for iphone 16",
+        "magnetic wireless charger portable",
+        "5000mah magsafe charger slim"
+      ],
+      "output_noun_phrases": [
+        "Magsafe power with bank capability for enhanced user experience",
+        "Slim magnetic portable with charger capability for enhanced user experience",
+        "Qi2 wireless power bank with iphone capability for enhanced user experience",
+        "Anker magsafe battery with pack capability for enhanced user experience",
+        "ultra thin power bank that delivers superior performance for iphone 16",
+        "Magnetic wireless charger with portable capability for enhanced user experience",
+        "5000mah magsafe charger with slim capability for enhanced user experience"
+      ],
+      "phrase_count": 7
+    },
+    "copy": {
+      "rag_ready_bullets": [
+        "Designed for Ultra-Slim 0.3-Inch Design: Experience 5,000mAh of dependable charging in a 0.3-inch slim magnetic power bank that slips effortlessly into your pocket.",
+        "Built for Qi2 Certified Fast Charging: 15W Max MagSafe-compatible fast charging powers your iPhone 16 Pro to 25% in just 42 minutes.",
+        "Ideal when 20W Max USB-C Charging: Also provides up to 20W of power out through its USB-C port for faster wired charging when you need maximum speed.",
+        "Perfect for Advanced Cooling System: With graphene cooling, dual NTC chips, and smart charging adjustments, stays below 104°F — 14 degrees cooler than the industry standard.",
+        "Engineered to What You Get: Anker Nano Power Bank (5K, MagGo, Slim), USB-C to USB-C charging cable, welcome guide, 24-month warranty, and friendly customer service."
+      ],
+      "title": {
+        "original": "Anker Nano Power Bank, Ultra-Slim 5,000mAh Magnetic Wireless Charging Battery, Qi2 Certified 15W Max MagSafe-Compatible Portable Charger, Ergonomic Design, for iPhone Air/17/16 Series",
+        "optimized": "Anker Nano Power Bank, Ultra-Slim 5,000mAh Magnetic Wireless Charging Battery, Qi2 Certified 15W Max MagSafe-Compatible Portable Charger, Ergonomic Design, for iPhone Air/17/16 Series",
+        "char_count": 183,
+        "truncated_preview_70": "Anker Nano Power Bank, Ultra-Slim 5,000mAh Magnetic Wireless Charging",
+        "leads_with_category": true
+      }
+    },
+    "scores": {
+      "semantic_density": {
+        "per_bullet": [
+          {
+            "bullet": "Designed for Ultra-Slim 0.3-Inch Design: Experience 5,000mAh of dependable char…",
+            "np_hits": 0
+          },
+          {
+            "bullet": "Built for Qi2 Certified Fast Charging: 15W Max MagSafe-compatible fast charging…",
+            "np_hits": 0
+          },
+          {
+            "bullet": "Ideal when 20W Max USB-C Charging: Also provides up to 20W of power out through…",
+            "np_hits": 0
+          },
+          {
+            "bullet": "Perfect for Advanced Cooling System: With graphene cooling, dual NTC chips, and…",
+            "np_hits": 0
+          },
+          {
+            "bullet": "Engineered to What You Get: Anker Nano Power Bank (5K, MagGo, Slim), USB-C to U…",
+            "np_hits": 0
+          }
+        ],
+        "average_np_hits": 0.0,
+        "density_label": "LOW",
+        "density_score": 0.0
+      },
+      "grade": "F"
+    }
+  },
+  "skill_03": {
+    "skill_id": "03",
+    "skill_name": "UGC Ground Truth Mining & Q&A Seeding",
+    "asin": "B0FKN7X7HM",
+    "ugc_mining": {
+      "technical_questions_found": [
+        "('Does it', '', '', '', '')",
+        "('Is this', '', '', '', '')",
+        "('', 'How fast', 'fast', '', '')"
+      ],
+      "question_count": 3,
+      "sentiment": {
+        "positive_count": 6,
+        "negative_count": 3,
+        "top_positive_snippets": [
+          "Incredibly thin — barely adds any bulk to my iPhone 16 Pro. Love how it snaps on with strong magnets.",
+          "Does it work through a case? I have a thick OtterBox and wondering if the magnets are strong enough.",
+          "Is this allowed on airplanes? I travel weekly and need TSA-approved chargers."
+        ],
+        "top_negative_snippets": [
+          "USB-C port stopped working after 2 months. Wireless charging still works but disappointing for the price.",
+          "Misleading — says 5000mAh but you only get about 3000mAh usable due to wireless efficiency loss. Should be clearer abou…",
+          "Doesn't work with my iPhone 12 mini. Wish the listing was clearer about compatibility."
+        ],
+        "recurring_negative_keywords": {
+          "stopped working": 1,
+          "disappointing": 1,
+          "misleading": 1,
+          "doesn't work": 1
+        }
+      }
+    },
+    "qa_seeding": {
+      "qa_pairs": [
+        {
+          "question": "Is this product allowed on airplanes?",
+          "answer": "Yes, this product meets FAA regulations for carry-on. Battery capacity is within the 100Wh limit.",
+          "template_key": "airplane"
+        },
+        {
+          "question": "Is it waterproof or water-resistant?",
+          "answer": "This product carries an None waterproof rating, suitable for splashing and rain exposure.",
+          "template_key": "waterproof"
+        },
+        {
+          "question": "What is the warranty policy?",
+          "answer": "Covered by a 24-month manufacturer warranty. Contact our support team for replacements.",
+          "template_key": "warranty"
+        },
+        {
+          "question": "How long does it take to fully charge?",
+          "answer": "With PD fast charging, a full charge takes approximately 2 hours.",
+          "template_key": "charging_time"
+        },
+        {
+          "question": "Is it compatible with iPhone and Android?",
+          "answer": "Yes, works with all USB-C and USB-A devices including iPhone (via adapter), Android, and laptops.",
+          "template_key": "compatibility"
+        },
+        {
+          "question": "Can I use this while wirelessly charging my phone?",
+          "answer": "Yes, you can use your phone normally while the power bank is attached and charging wirelessly.",
+          "template_key": "competitor_derived"
+        },
+        {
+          "question": "Does it work with MagSafe cases?",
+          "answer": "Yes, it's compatible with official MagSafe cases and most third-party MagSafe-compatible cases.",
+          "template_key": "competitor_derived"
+        },
+        {
+          "question": "Can I charge the power bank and my phone at the same time?",
+          "answer": "Yes, it supports pass-through charging — plug USB-C into the power bank and it charges both simultaneously.",
+          "template_key": "competitor_derived"
+        }
+      ],
+      "pair_count": 8
+    },
+    "recommendations": [
+      "Verify all Title claims match backend attributes exactly (quantity, dimensions, included accessories)",
+      "Seed Q&A with warranty/return policy answer to intercept Rufus reliability queries"
+    ],
+    "scores": {
+      "qa_coverage_pct": 0.0,
+      "grade": "F",
+      "proof_nodes_seeded": 8
+    }
+  },
+  "skill_04": {
+    "skill_id": "04",
+    "skill_name": "Multimodal Visual SEO Validation",
+    "asin": "B0FKN7X7HM",
+    "image_reports": [
+      {
+        "filename": "anker_a1665_main.jpg",
+        "image_type": "main",
+        "alt_text": {
+          "original": "Anker Nano Power Bank black",
+          "optimized": "Anker Nano Power Bank 5000mAh MagSafe Magsafe power with bank capability for enhanced user experience — clean studio shot showing primary product view on white background",
+          "score": {
+            "is_generic": true,
+            "length": 27,
+            "noun_phrase_hits": 0,
+            "score": 0.0,
+            "grade": "F"
+          }
+        },
+        "ocr_audit": {
+          "has_ocr_text": false,
+          "np_coverage": 0,
+          "missing_phrases": [
+            "Magsafe power with bank capability for enhanced user experience",
+            "Slim magnetic portable with charger capability for enhanced user experience",
+            "Qi2 wireless power bank with iphone capability for enhanced user experience"
+          ]
+        },
+        "ocr_tips": []
+      },
+      {
+        "filename": "anker_a1665_infographic_specs.jpg",
+        "image_type": "infographic",
+        "alt_text": {
+          "original": "Anker power bank specifications infographic showing 15W Qi2 and 20W USB-C",
+          "optimized": "Anker Nano Power Bank 5000mAh MagSafe Magsafe power with bank capability for enhanced user experience — callout annotations showing technical specifications and key features",
+          "score": {
+            "is_generic": false,
+            "length": 73,
+            "noun_phrase_hits": 0,
+            "score": 4.4,
+            "grade": "F"
+          }
+        },
+        "ocr_audit": {
+          "has_ocr_text": true,
+          "np_coverage_pct": 0.0,
+          "present_phrases": [],
+          "missing_phrases": [
+            "Magsafe power with bank capability for enhanced user experience",
+            "Slim magnetic portable with charger capability for enhanced user experience",
+            "Qi2 wireless power bank with iphone capability for enhanced user experience"
+          ]
+        },
+        "ocr_tips": [
+          "Use dark text (#1A1A1A or similar) on light backgrounds (≥4.5:1 contrast ratio)",
+          "Use font size ≥ 24px for overlay text to ensure OCR legibility",
+          "Prefer sans-serif fonts (e.g., Helvetica, Inter) for machine readability",
+          "Keep text blocks to ≤ 6 words per line to avoid OCR fragmentation"
+        ]
+      },
+      {
+        "filename": "anker_a1665_lifestyle_phone.jpg",
+        "image_type": "lifestyle",
+        "alt_text": {
+          "original": "Person holding iPhone with Anker MagSafe power bank attached on the go",
+          "optimized": "Anker Nano Power Bank 5000mAh MagSafe Magsafe power with bank capability for enhanced user experience — user interacting with product showing product in real-world use environment",
+          "score": {
+            "is_generic": false,
+            "length": 70,
+            "noun_phrase_hits": 0,
+            "score": 4.2,
+            "grade": "F"
+          }
+        },
+        "ocr_audit": {
+          "has_ocr_text": false,
+          "np_coverage": 0,
+          "missing_phrases": [
+            "Magsafe power with bank capability for enhanced user experience",
+            "Slim magnetic portable with charger capability for enhanced user experience",
+            "Qi2 wireless power bank with iphone capability for enhanced user experience"
+          ]
+        },
+        "ocr_tips": []
+      },
+      {
+        "filename": "anker_a1665_infographic_cooling.jpg",
+        "image_type": "infographic",
+        "alt_text": {
+          "original": "Thermal cooling comparison showing graphene heat dissipation",
+          "optimized": "Anker Nano Power Bank 5000mAh MagSafe Magsafe power with bank capability for enhanced user experience — callout annotations showing technical specifications and key features",
+          "score": {
+            "is_generic": false,
+            "length": 60,
+            "noun_phrase_hits": 0,
+            "score": 3.6,
+            "grade": "F"
+          }
+        },
+        "ocr_audit": {
+          "has_ocr_text": true,
+          "np_coverage_pct": 0.0,
+          "present_phrases": [],
+          "missing_phrases": [
+            "Magsafe power with bank capability for enhanced user experience",
+            "Slim magnetic portable with charger capability for enhanced user experience",
+            "Qi2 wireless power bank with iphone capability for enhanced user experience"
+          ]
+        },
+        "ocr_tips": [
+          "Use dark text (#1A1A1A or similar) on light backgrounds (≥4.5:1 contrast ratio)",
+          "Use font size ≥ 24px for overlay text to ensure OCR legibility",
+          "Prefer sans-serif fonts (e.g., Helvetica, Inter) for machine readability",
+          "Keep text blocks to ≤ 6 words per line to avoid OCR fragmentation"
+        ]
+      },
+      {
+        "filename": "anker_a1665_compatibility.jpg",
+        "image_type": "infographic",
+        "alt_text": {
+          "original": "Compatible iPhone models list",
+          "optimized": "Anker Nano Power Bank 5000mAh MagSafe Magsafe power with bank capability for enhanced user experience — callout annotations showing technical specifications and key features",
+          "score": {
+            "is_generic": true,
+            "length": 29,
+            "noun_phrase_hits": 0,
+            "score": 0.0,
+            "grade": "F"
+          }
+        },
+        "ocr_audit": {
+          "has_ocr_text": true,
+          "np_coverage_pct": 0.0,
+          "present_phrases": [],
+          "missing_phrases": [
+            "Magsafe power with bank capability for enhanced user experience",
+            "Slim magnetic portable with charger capability for enhanced user experience",
+            "Qi2 wireless power bank with iphone capability for enhanced user experience"
+          ]
+        },
+        "ocr_tips": [
+          "Use dark text (#1A1A1A or similar) on light backgrounds (≥4.5:1 contrast ratio)",
+          "Use font size ≥ 24px for overlay text to ensure OCR legibility",
+          "Prefer sans-serif fonts (e.g., Helvetica, Inter) for machine readability",
+          "Keep text blocks to ≤ 6 words per line to avoid OCR fragmentation"
+        ]
+      }
+    ],
+    "summary": {
+      "total_images": 5,
+      "generic_alt_text_count": 2,
+      "infographics_audited": 3,
+      "ocr_tips": [
+        "Use dark text (#1A1A1A or similar) on light backgrounds (≥4.5:1 contrast ratio)",
+        "Use font size ≥ 24px for overlay text to ensure OCR legibility",
+        "Prefer sans-serif fonts (e.g., Helvetica, Inter) for machine readability",
+        "Keep text blocks to ≤ 6 words per line to avoid OCR fragmentation"
+      ]
+    },
+    "scores": {
+      "average_alt_text_score": 2.4,
+      "grade": "F",
+      "images_needing_update": 2
+    }
+  },
+  "skill_05": {
+    "skill_id": "05",
+    "skill_name": "A+ Knowledge Base Engineering",
+    "asin": "B0FKN7X7HM",
+    "comparison_table_audit": {
+      "has_table": true,
+      "semantic_headers_found": [
+        "charging speed",
+        "weight",
+        "capacity"
+      ],
+      "semantic_headers_missing": [
+        "waterproof rating",
+        "battery life",
+        "dimensions",
+        "compatibility",
+        "warranty"
+      ],
+      "semantic_header_score": 25.0,
+      "specific_data_ratio": 88.9,
+      "recommendations": [
+        "Add these semantic headers: waterproof rating, battery life, dimensions"
+      ]
+    },
+    "module_audit": {
+      "module_count": 3,
+      "module_types": [
+        "comparison_table",
+        "faq",
+        "lifestyle_image"
+      ],
+      "has_knowledge_base_module": true,
+      "missing_kb_modules": [
+        "technical_specs"
+      ]
+    },
+    "hallucination_risk": {
+      "vague_claims_found": [
+        "fast charging"
+      ],
+      "specific_data_anchors": 8,
+      "hallucination_risk_score": 92.5,
+      "risk_level": "LOW"
+    },
+    "scores": {
+      "composite_aplus_score": 67.8,
+      "grade": "C"
+    }
+  },
+  "skill_06": {
+    "skill_id": "06",
+    "skill_name": "Mobile Habitat Optimization",
+    "asin": "B0FKN7X7HM",
+    "title_analysis": {
+      "original_title": "Anker Nano Power Bank, Ultra-Slim 5,000mAh Magnetic Wireless Charging Battery, Qi2 Certified 15W Max MagSafe-Compatible Portable Charger, Ergonomic Design, for iPhone Air/17/16 Series",
+      "char_count": 183,
+      "rufus_chat_preview": "Anker Nano Power Bank, Ultra-Slim 5,000mAh Magnetic Wireless Charging…",
+      "opens_with_category": true,
+      "category_keywords_in_first_70": [
+        "power bank"
+      ],
+      "filler_openers_detected": [],
+      "optimized_title_suggestion": "",
+      "title_score": 90.0
+    },
+    "video_analysis": [
+      {
+        "video_title": "Stop settling for bulky MagSafe batteries — meet the Anker Nano Power Bank",
+        "aspect_ratio": "9:16",
+        "is_vertical_9x16": true,
+        "has_problem_arc": true,
+        "has_solution_arc": true,
+        "has_ps_arc": true,
+        "video_score": 90.0,
+        "recommendations": []
+      }
+    ],
+    "scores": {
+      "title_score": 90.0,
+      "video_avg_score": 90.0,
+      "composite_mobile_score": 90.0,
+      "grade": "A"
+    }
+  },
+  "skill_07": {
+    "skill_id": "07",
+    "skill_name": "Semantic Integrity & Anti-Optimization Check",
+    "asin": "B0FKN7X7HM",
+    "compliance_report": {
+      "keyword_stuffing": {
+        "stuffed_phrases": {
+          "power bank": 3,
+          "usb c": 4
+        },
+        "stuffed_count": 2,
+        "legacy_seo_phrases": [],
+        "legacy_count": 0
+      },
+      "backend_conflicts": [],
+      "conflict_count": 0,
+      "unaddressed_negative_themes": [
+        {
+          "theme": "stopped working",
+          "recommendation": "Add warranty / reliability claim with proof (e.g., '50,000-cycle tested')"
+        },
+        {
+          "theme": "disappointing",
+          "recommendation": "Address 'disappointing' concern explicitly in a bullet point or Q&A"
+        },
+        {
+          "theme": "misleading",
+          "recommendation": "Audit title claims vs backend for exact quantity/spec consistency"
+        },
+        {
+          "theme": "doesn't work",
+          "recommendation": "Address 'doesn't work' concern explicitly in a bullet point or Q&A"
+        }
+      ]
+    },
+    "sanitized_listing": {
+      "sanitized_title": "Anker Nano Power Bank, Ultra-Slim 5,000mAh Magnetic Wireless Charging Battery, Qi2 Certified 15W Max MagSafe-Compatible Portable Charger, Ergonomic Design, for iPhone Air/17/16 Series",
+      "sanitized_bullets": [
+        "Designed for Ultra-Slim 0.3-Inch Design: Experience 5,000mAh of dependable charging in a 0.3-inch slim magnetic power bank that slips effortlessly into your pocket.",
+        "Built for Qi2 Certified Fast Charging: 15W Max MagSafe-compatible fast charging powers your iPhone 16 Pro to 25% in just 42 minutes.",
+        "Ideal when 20W Max USB-C Charging: Also provides up to 20W of power out through its USB-C port for faster wired charging when you need maximum speed.",
+        "Perfect for Advanced Cooling System: With graphene cooling, dual NTC chips, and smart charging adjustments, stays below 104°F — 14 degrees cooler than the industry standard.",
+        "Engineered to What You Get: Anker Nano Power Bank (5K, MagGo, Slim), USB-C to USB-C charging cable, welcome guide, 24-month warranty, and friendly customer service."
+      ],
+      "phrases_removed": [
+        "power bank",
+        "usb c"
+      ]
+    },
+    "scores": {
+      "integrity_score": 66.0,
+      "grade": "C",
+      "issues_found": 6
+    }
+  }
+}

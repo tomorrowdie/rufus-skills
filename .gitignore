@@ -1,0 +1,14 @@
+# Amazon flat file templates — never commit
+*.xlsm
+markets/*/catalog/*/raw/*.xlsm
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+dist/
+.env
+
+# IDE
+.idea/
+.vscode/
