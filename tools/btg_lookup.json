@@ -1,0 +1,17 @@
+{
+  "portable_power_banks": {
+    "category": "Cell Phones & Accessories",
+    "node_id": "2407749011",
+    "node_path": "Cell Phones & Accessories > Accessories > Chargers & Power Adapters > Portable Power Banks"
+  },
+  "wall_chargers": {
+    "category": "Cell Phones & Accessories",
+    "node_id": "2407755011",
+    "node_path": "Cell Phones & Accessories > Accessories > Chargers & Power Adapters > Wall Chargers"
+  },
+  "charging_cables": {
+    "category": "Cell Phones & Accessories",
+    "node_id": "2407774011",
+    "node_path": "Cell Phones & Accessories > Accessories > Cables & Adapters > Cables"
+  }
+}

@@ -274,7 +274,7 @@ def _render_header(data: dict) -> str:
     market = data.get("market", "US")
     market_id = data.get("market_id", "ATVPDKIKX0DER")
     category = data.get("category", "N/A")
-    date_str = data.get("report_date", datetime.now(timezone.utc).strftime("%B %-d, %Y"))
+    date_str = data.get("report_date", datetime.now(timezone.utc).strftime("%B %d, %Y"))
 
     # Try to extract model from skill_01 injection payload
     model = ""
@@ -1222,7 +1222,7 @@ def _render_footer(data: dict) -> str:
     asin = data.get("asin", "N/A")
     market = data.get("market", "US")
     market_id = data.get("market_id", "ATVPDKIKX0DER")
-    date_str = data.get("report_date", datetime.now(timezone.utc).strftime("%B %-d, %Y"))
+    date_str = data.get("report_date", datetime.now(timezone.utc).strftime("%B %d, %Y"))
     runtime = data.get("runtime", "—")
     total_fields = data.get("total_fields", "—")
 
@@ -1274,7 +1274,7 @@ class Skill08:
         self.data.setdefault("category", category)
         self.data.setdefault("total_fields", total_fields)
         self.data.setdefault("runtime", runtime)
-        self.data.setdefault("report_date", datetime.now(timezone.utc).strftime("%B %-d, %Y"))
+        self.data.setdefault("report_date", datetime.now(timezone.utc).strftime("%B %d, %Y"))
 
         self._html: str = ""
         self._output: dict[str, Any] = {}

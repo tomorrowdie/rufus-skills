@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rufus Skills Dashboard</title>
+  <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="eyebrow">Rufus Skills</p>
+      <h1>Pipeline Grades Dashboard</h1>
+      <p class="subtitle">Visualize <code>results/{asin}_pipeline.json</code> output from <code>run_product.py</code>.</p>
+    </header>
+
+    <section class="panel controls">
+      <div class="controls-row">
+        <label for="asinInput">ASIN</label>
+        <input id="asinInput" type="text" value="B0FKN7X7HM" placeholder="B0FKN7X7HM">
+        <button id="loadByAsinBtn" type="button">Load From Results</button>
+      </div>
+      <div class="controls-row">
+        <label for="fileInput">JSON File</label>
+        <input id="fileInput" type="file" accept=".json,application/json">
+      </div>
+      <p class="hint">If loading by ASIN, run a local server from repo root so <code>../results/</code> can be fetched.</p>
+      <p id="statusText" class="status"></p>
+    </section>
+
+    <section class="panel meta" id="metaPanel" hidden>
+      <h2>Product</h2>
+      <div class="meta-grid">
+        <div><span>ASIN</span><strong id="metaAsin">-</strong></div>
+        <div><span>Market</span><strong id="metaMarket">-</strong></div>
+        <div><span>Category</span><strong id="metaCategory">-</strong></div>
+        <div><span>Product</span><strong id="metaProduct">-</strong></div>
+      </div>
+    </section>
+
+    <section class="panel" id="gradesPanel" hidden>
+      <div class="panel-head">
+        <h2>grades_summary</h2>
+        <strong id="overallGrade" class="overall">-</strong>
+      </div>
+      <div id="gradesGrid" class="grades-grid"></div>
+    </section>
+  </main>
+
+  <script src="./dashboard.js"></script>
+</body>
+</html>

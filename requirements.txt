@@ -27,10 +27,11 @@
 # python-amazon-sp-api>=1.0.0
 
 # ---------------------------------------------------------------------------
-# Optional: HTTP API wrapper (for n8n HTTP node integration)
+# HTTP API wrapper (FastAPI — exposes pipeline via REST for Auto-Pilot + partners)
 # ---------------------------------------------------------------------------
-# fastapi>=0.111.0
-# uvicorn>=0.30.0
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.0
+pydantic>=2.0.0
 
 # ---------------------------------------------------------------------------
 # Development & Testing

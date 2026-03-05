@@ -1,0 +1,413 @@
+{
+  "asin": "B0TEST1234",
+  "product": "Mock Product - High Capacity Portable Charger 10000mAh",
+  "market": "us",
+  "category_path": "Cell Phones & Accessories > Accessories > Chargers & Power Adapters > Portable Power Banks",
+  "grades_summary": {
+    "skill_01_taxonomy": "A",
+    "skill_02_npo": "F",
+    "skill_03_ugc": "A",
+    "skill_04_visual_seo": "F",
+    "skill_05_aplus": "C",
+    "skill_06_mobile": "B",
+    "skill_07_integrity": "A"
+  },
+  "skill_01": {
+    "skill_id": "01",
+    "skill_name": "Structured Taxonomy & Attribute Injection",
+    "asin": "B0TEST1234",
+    "audit": {
+      "null_fields": {},
+      "null_count": 0,
+      "standardized_values": {},
+      "standardized_count": 0,
+      "knowledge_graph_mapping": {}
+    },
+    "injection_payload": {
+      "capacity_mah": 10000,
+      "usb_c_output": "18W",
+      "brand": "MockBrand",
+      "manufacturer": "MockMfg",
+      "item_name": "Mock Product - High Capacity Portable Charger 10000mAh",
+      "battery_capacity": "10000",
+      "item_weight": "200",
+      "browse_tree": {
+        "category": "Cell Phones & Accessories",
+        "node_id": "2407749011",
+        "node_path": "Cell Phones & Accessories > Accessories > Chargers & Power Adapters > Portable Power Banks"
+      }
+    },
+    "scores": {
+      "completeness_pct": 100.0,
+      "grade": "A",
+      "high_confidence_tokens": 8
+    }
+  },
+  "skill_02": {
+    "skill_id": "02",
+    "skill_name": "Noun Phrase Optimization (NPO) & RAG-Ready Copy",
+    "asin": "B0TEST1234",
+    "npo": {
+      "input_keywords": [
+        "portable charger",
+        "power bank 10000mah",
+        "fast charging power bank"
+      ],
+      "output_noun_phrases": [
+        "Portable with charger capability for enhanced user experience",
+        "Power bank with 10000mah capability for enhanced user experience",
+        "Fast charging power with bank capability for enhanced user experience"
+      ],
+      "phrase_count": 3
+    },
+    "copy": {
+      "rag_ready_bullets": [
+        "Designed for High capacity 10000mAh portable charger. — answers the question: How fast does it charge a phone?",
+        "Built for Fast charging support with USB-C. — answers the question: Does it work with recent phones?",
+        "Ideal when Compact and lightweight design."
+      ],
+      "title": {
+        "original": "Mock Product - High Capacity Portable Charger 10000mAh",
+        "optimized": "Mock Product - High Capacity Portable Charger 10000mAh",
+        "char_count": 54,
+        "truncated_preview_70": "Mock Product - High Capacity Portable Charger 10000mAh",
+        "leads_with_category": true
+      }
+    },
+    "scores": {
+      "semantic_density": {
+        "per_bullet": [
+          {
+            "bullet": "Designed for High capacity 10000mAh portable charger. — answers the question: H…",
+            "np_hits": 0
+          },
+          {
+            "bullet": "Built for Fast charging support with USB-C. — answers the question: Does it wor…",
+            "np_hits": 0
+          },
+          {
+            "bullet": "Ideal when Compact and lightweight design.",
+            "np_hits": 0
+          }
+        ],
+        "average_np_hits": 0.0,
+        "density_label": "LOW",
+        "density_score": 0.0
+      },
+      "grade": "F"
+    }
+  },
+  "skill_03": {
+    "skill_id": "03",
+    "skill_name": "UGC Ground Truth Mining & Q&A Seeding",
+    "asin": "B0TEST1234",
+    "ugc_mining": {
+      "technical_questions_found": [],
+      "question_count": 0,
+      "sentiment": {
+        "positive_count": 1,
+        "negative_count": 0,
+        "top_positive_snippets": [
+          "Great portable charger, very fast and reliable."
+        ],
+        "top_negative_snippets": [],
+        "recurring_negative_keywords": {}
+      }
+    },
+    "qa_seeding": {
+      "qa_pairs": [
+        {
+          "question": "Is this product allowed on airplanes?",
+          "answer": "Yes, this product meets FAA regulations for carry-on. Battery capacity is within the 100Wh limit.",
+          "template_key": "airplane"
+        },
+        {
+          "question": "Is it waterproof or water-resistant?",
+          "answer": "This product carries an None waterproof rating, suitable for splashing and rain exposure.",
+          "template_key": "waterproof"
+        },
+        {
+          "question": "What is the warranty policy?",
+          "answer": "Covered by a 12-month manufacturer warranty. Contact our support team for replacements.",
+          "template_key": "warranty"
+        },
+        {
+          "question": "How long does it take to fully charge?",
+          "answer": "With PD fast charging, a full charge takes approximately 3 hours.",
+          "template_key": "charging_time"
+        },
+        {
+          "question": "Is it compatible with iPhone and Android?",
+          "answer": "Yes, works with all USB-C and USB-A devices including iPhone (via adapter), Android, and laptops.",
+          "template_key": "compatibility"
+        },
+        {
+          "question": "Can I carry this on an airplane?",
+          "answer": "Yes, it is TSA approved.",
+          "template_key": "competitor_derived"
+        }
+      ],
+      "pair_count": 6
+    },
+    "recommendations": [
+      "No critical negative patterns detected — maintain current copy quality"
+    ],
+    "scores": {
+      "qa_coverage_pct": 100.0,
+      "grade": "A",
+      "proof_nodes_seeded": 6
+    }
+  },
+  "skill_04": {
+    "skill_id": "04",
+    "skill_name": "Multimodal Visual SEO Validation",
+    "asin": "B0TEST1234",
+    "image_reports": [
+      {
+        "filename": "main.jpg",
+        "image_type": "main",
+        "alt_text": {
+          "original": "Mock Product Main Image",
+          "optimized": "Mock Product - High Capacity Portable Charger 10000mAh Portable with charger capability for enhanced user experience — clean studio shot showing primary product view on white background",
+          "score": {
+            "is_generic": true,
+            "length": 23,
+            "noun_phrase_hits": 0,
+            "score": 0.0,
+            "grade": "F"
+          }
+        },
+        "ocr_audit": {
+          "has_ocr_text": false,
+          "np_coverage": 0,
+          "missing_phrases": [
+            "Portable with charger capability for enhanced user experience",
+            "Power bank with 10000mah capability for enhanced user experience",
+            "Fast charging power with bank capability for enhanced user experience"
+          ]
+        },
+        "ocr_tips": []
+      }
+    ],
+    "summary": {
+      "total_images": 1,
+      "generic_alt_text_count": 1,
+      "infographics_audited": 0,
+      "ocr_tips": [
+        "Use dark text (#1A1A1A or similar) on light backgrounds (≥4.5:1 contrast ratio)",
+        "Use font size ≥ 24px for overlay text to ensure OCR legibility",
+        "Prefer sans-serif fonts (e.g., Helvetica, Inter) for machine readability",
+        "Keep text blocks to ≤ 6 words per line to avoid OCR fragmentation"
+      ]
+    },
+    "scores": {
+      "average_alt_text_score": 0.0,
+      "grade": "F",
+      "images_needing_update": 1
+    }
+  },
+  "skill_05": {
+    "skill_id": "05",
+    "skill_name": "A+ Knowledge Base Engineering",
+    "asin": "B0TEST1234",
+    "comparison_table_audit": {
+      "has_table": true,
+      "semantic_headers_found": [
+        "capacity"
+      ],
+      "semantic_headers_missing": [
+        "waterproof rating",
+        "battery life",
+        "charging speed",
+        "weight",
+        "dimensions"
+      ],
+      "semantic_header_score": 8.3,
+      "specific_data_ratio": 100.0,
+      "recommendations": [
+        "Add these semantic headers: waterproof rating, battery life, charging speed"
+      ]
+    },
+    "module_audit": {
+      "module_count": 1,
+      "module_types": [
+        "technical_specs"
+      ],
+      "has_knowledge_base_module": true,
+      "missing_kb_modules": [
+        "faq",
+        "comparison_table"
+      ]
+    },
+    "hallucination_risk": {
+      "vague_claims_found": [],
+      "specific_data_anchors": 2,
+      "hallucination_risk_score": 100.0,
+      "risk_level": "LOW"
+    },
+    "scores": {
+      "composite_aplus_score": 63.3,
+      "grade": "C"
+    }
+  },
+  "skill_06": {
+    "skill_id": "06",
+    "skill_name": "Mobile Habitat Optimization",
+    "asin": "B0TEST1234",
+    "title_analysis": {
+      "original_title": "Mock Product - High Capacity Portable Charger 10000mAh",
+      "char_count": 54,
+      "rufus_chat_preview": "Mock Product - High Capacity Portable Charger 10000mAh",
+      "opens_with_category": true,
+      "category_keywords_in_first_70": [
+        "charger"
+      ],
+      "filler_openers_detected": [],
+      "optimized_title_suggestion": "",
+      "title_score": 100.0
+    },
+    "bullet_truncation": {
+      "bullets_analyzed": 3,
+      "truncated_count": 0,
+      "per_bullet": [
+        {
+          "bullet_index": 1,
+          "char_count": 40,
+          "visible_text": "High capacity 10000mAh portable charger.",
+          "hidden_text": "",
+          "is_truncated": false,
+          "has_spec_in_visible": true,
+          "benefit_visible": true,
+          "bullet_score": 100.0
+        },
+        {
+          "bullet_index": 2,
+          "char_count": 33,
+          "visible_text": "Fast charging support with USB-C.",
+          "hidden_text": "",
+          "is_truncated": false,
+          "has_spec_in_visible": false,
+          "benefit_visible": true,
+          "bullet_score": 100.0
+        },
+        {
+          "bullet_index": 3,
+          "char_count": 31,
+          "visible_text": "Compact and lightweight design.",
+          "hidden_text": "",
+          "is_truncated": false,
+          "has_spec_in_visible": false,
+          "benefit_visible": true,
+          "bullet_score": 100.0
+        }
+      ],
+      "avg_bullet_score": 100.0
+    },
+    "image_order": {
+      "images_analyzed": 1,
+      "per_slot": [
+        {
+          "slot": 1,
+          "actual_type": "main",
+          "recommended_type": "main",
+          "is_match": true,
+          "is_critical_mismatch": false,
+          "filename": "main.jpg"
+        }
+      ],
+      "order_score": 100.0,
+      "recommendation": ""
+    },
+    "swipe_depth": {
+      "first_infographic_at_swipe": null,
+      "comparison_table_at_position": null,
+      "spec_reachability_score": 0,
+      "comparison_reachability_score": 0,
+      "swipe_depth_score": 0.0,
+      "total_images": 1,
+      "total_modules": 1
+    },
+    "aplus_fold": {
+      "has_modules": true,
+      "first_module_type": "technical_specs",
+      "fact_density": 3,
+      "fold_score": 90.0,
+      "recommendation": ""
+    },
+    "touch_targets": {
+      "has_comparison_table": false,
+      "has_video_content": false,
+      "image_count": 1,
+      "issues": [
+        "No comparison table found — missing high-conversion CTA proximity point on mobile.",
+        "No video content — video play buttons are high-engagement 44×44px touch targets on mobile."
+      ],
+      "touch_target_score": 60.0
+    },
+    "voice_readiness": {
+      "flagged_phrases": [
+        {
+          "text": "USB",
+          "issue": "Non-conversational pattern"
+        },
+        {
+          "text": "10000mAh",
+          "issue": "Non-conversational pattern"
+        },
+        {
+          "text": "10000mAh",
+          "issue": "Non-conversational pattern"
+        }
+      ],
+      "flagged_count": 3,
+      "title_natural_flow": true,
+      "conversational_bullets": 3,
+      "total_bullets": 3,
+      "conversational_ratio": 1.0,
+      "voice_readiness_score": 85.0
+    },
+    "video_analysis": [],
+    "scores": {
+      "title_score": 100.0,
+      "bullet_truncation_score": 100.0,
+      "image_order_score": 100.0,
+      "swipe_depth_score": 0.0,
+      "aplus_fold_score": 90.0,
+      "touch_target_score": 60.0,
+      "voice_readiness_score": 85.0,
+      "video_avg_score": 50.0,
+      "composite_mobile_score": 80.5,
+      "grade": "B"
+    }
+  },
+  "skill_07": {
+    "skill_id": "07",
+    "skill_name": "Semantic Integrity & Anti-Optimization Check",
+    "asin": "B0TEST1234",
+    "compliance_report": {
+      "keyword_stuffing": {
+        "stuffed_phrases": {},
+        "stuffed_count": 0,
+        "legacy_seo_phrases": [],
+        "legacy_count": 0
+      },
+      "backend_conflicts": [],
+      "conflict_count": 0,
+      "unaddressed_negative_themes": []
+    },
+    "sanitized_listing": {
+      "sanitized_title": "Mock Product - High Capacity Portable Charger 10000mAh",
+      "sanitized_bullets": [
+        "Designed for High capacity 10000mAh portable charger. — answers the question: How fast does it charge a phone?",
+        "Built for Fast charging support with USB-C. — answers the question: Does it work with recent phones?",
+        "Ideal when Compact and lightweight design."
+      ],
+      "phrases_removed": []
+    },
+    "scores": {
+      "integrity_score": 100.0,
+      "grade": "A",
+      "issues_found": 0
+    }
+  }
+}

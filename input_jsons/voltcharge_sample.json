@@ -1,0 +1,199 @@
+{
+  "asin": "B0EXAMPLE_POWERBANK",
+  "market": "us",
+  "category_path": "cell_phones_accessories/accessories/chargers_power_adapters/portable_power_banks",
+  "title": "VoltCharge PowerCore 20000mAh Portable Power Bank \u2014 USB-C PD 65W Fast Charging for iPhone, Android, MacBook, Camping Travel",
+  "bullets": [
+    "20000mAh high-capacity portable power bank charges iPhone 15 Pro Max 4.5 times, Samsung Galaxy S24 3.8 times, or MacBook Air once on a single charge",
+    "65W USB-C PD 3.0 fast charging output \u2014 charge your MacBook Pro to 50% in just 30 minutes, with simultaneous 3-device charging via USB-C + dual USB-A ports",
+    "IPX5 water-resistant with aircraft-grade aluminum chassis and drop-tested to MIL-STD-810G \u2014 built for camping, hiking, and travel adventures",
+    "TSA-approved 74Wh battery meets FAA carry-on regulations \u2014 LED percentage display shows exact remaining power at a glance",
+    "What's in the box: VoltCharge PowerCore 20000, USB-C to USB-C cable, travel pouch, quick start guide, and 18-month manufacturer warranty"
+  ],
+  "clr": {
+    "feed_product_type": "ConsumerElectronics",
+    "item_sku": "PB-20K-BLK-001",
+    "brand_name": "VoltCharge",
+    "item_name": "VoltCharge PowerCore 20000mAh Portable Power Bank \u2014 USB-C PD 65W Fast Charging for iPhone, Android, MacBook, Camping Travel",
+    "manufacturer": "VoltCharge International Ltd.",
+    "product_description": "The VoltCharge PowerCore delivers 20000mAh of portable power with 65W USB-C PD fast charging. Charge your MacBook Pro to 50% in just 30 minutes. IPX5 water-resistant with aircraft-grade aluminum chassis. TSA-approved for carry-on. Includes USB-C to USB-C cable and travel pouch.",
+    "item_type": "portable-power-bank",
+    "external_product_id": "0850045678901",
+    "external_product_id_type": "UPC",
+    "color_name": "Midnight Black",
+    "color_map": "Black",
+    "recommended_uses_for_product": "Indoor/Outdoor",
+    "power_source_type": "DC",
+    "voltage": "5",
+    "voltage_unit_of_measure": "Volts",
+    "connector_type": "USB-C",
+    "battery_capacity": "20000",
+    "battery_capacity_unit_of_measure": "milliamp_hours",
+    "battery_cell_composition": "Lithium-Ion",
+    "number_of_ports": "3",
+    "reusability": "Rechargeable",
+    "battery_charge_time": "1.5",
+    "battery_charge_time_unit_of_measure": "Hours",
+    "are_batteries_included": "Yes",
+    "batteries_required": "Yes",
+    "lithium_battery_packaging": "Batteries contained in equipment",
+    "number_of_batteries": "1",
+    "number_of_lithium_ion_cells": "4",
+    "number_of_lithium_metal_cells": "0",
+    "lithium_battery_energy_content": "74",
+    "lithium_battery_energy_content_unit_of_measure": "Watt Hours",
+    "lithium_battery_weight": "320",
+    "lithium_battery_weight_unit_of_measure": "Grams",
+    "battery_weight": "320",
+    "battery_weight_unit_of_measure": "GR",
+    "item_weight": "450",
+    "item_weight_unit_of_measure": "Grams",
+    "item_volume": "240",
+    "item_volume_unit_of_measure": "milliliters",
+    "country_of_origin": "China",
+    "has_less_than_30_percent_state_of_charge": "Yes",
+    "thickness_head_to_toe": "6.3",
+    "thickness_head_to_toe_unit_of_measure": "Inches",
+    "thickness_width_side_to_side": "3.1",
+    "thickness_width_side_to_side_unit_of_measure": "Inches",
+    "thickness_floor_to_top": "0.9",
+    "thickness_floor_to_top_unit_of_measure": "Inches",
+    "standard_price": "49.99",
+    "currency": "USD",
+    "condition_type": "New",
+    "fulfillment_center_id": "AMAZON_NA"
+  },
+  "spec": {
+    "capacity_mah": 20000,
+    "output_ports": 3,
+    "usb_c_output": "65W PD 3.0",
+    "usb_a_output_1": "18W QC 3.0",
+    "usb_a_output_2": "12W",
+    "input": "65W USB-C PD",
+    "total_output": "65W max",
+    "weight_grams": 450,
+    "dimensions_inches": "6.3 x 3.1 x 0.9",
+    "waterproof_rating": "IPX5",
+    "charging_standard": "PD 65W + QC 3.0",
+    "battery_type": "Li-ion 21700 cells",
+    "cell_count": 4,
+    "energy_wh": 74,
+    "charge_cycles": 500,
+    "operating_temp_c": "-10 to 45",
+    "certifications": "FCC, CE, RoHS, UN38.3, MSDS",
+    "material": "Aircraft-grade Aluminum Alloy + ABS",
+    "led_display": "Yes, percentage readout",
+    "pass_through_charging": "Yes",
+    "tsa_approved": true
+  },
+  "btg": {
+    "category": "Cell Phones & Accessories",
+    "node_id": "2407749011",
+    "node_path": "Cell Phones & Accessories > Accessories > Chargers & Power Adapters > Portable Power Banks"
+  },
+  "keywords": [
+    "portable power bank 20000mah",
+    "fast charging power bank usb c",
+    "portable charger for camping",
+    "65w pd power bank for macbook",
+    "power bank for iphone android",
+    "travel power bank tsa approved",
+    "high capacity portable charger"
+  ],
+  "topic_clusters": {
+    "charging_speed": ["How fast does it charge my MacBook?", "What wattage output?"],
+    "portability": ["Is it airplane safe?", "How heavy is it?"],
+    "compatibility": ["Does it work with iPhone?", "Can I charge multiple devices?"],
+    "durability": ["Is it waterproof?", "Is it drop-resistant?"],
+    "capacity": ["How many phone charges do I get?", "What is the real usable capacity?"]
+  },
+  "reviews": [
+    {"text": "Charges my MacBook Pro amazingly fast \u2014 50% in 30 minutes with the PD output. Love the aluminum build.", "rating": 5},
+    {"text": "Does it work on airplanes? I need it for international travel and layovers.", "rating": 4},
+    {"text": "Is this waterproof? I want to use it camping near lakes and rivers.", "rating": 4},
+    {"text": "How fast does it charge my iPhone 15? Looking for something quick.", "rating": 3},
+    {"text": "Stopped working after 3 weeks. The USB-C port feels loose and cheap. Disappointing.", "rating": 1},
+    {"text": "Can I charge my MacBook and iPhone at the same time? Works perfectly for that!", "rating": 5},
+    {"text": "The LED display is nice but the power bank is heavier than expected. 450g is a lot.", "rating": 3},
+    {"text": "Best portable charger I've owned. TSA friendly, fast charging, great build quality.", "rating": 5},
+    {"text": "Misleading capacity \u2014 doesn't actually deliver 20000mAh to the device due to conversion loss.", "rating": 2},
+    {"text": "Survived a 4-foot drop onto concrete. The aluminum really protects it.", "rating": 5}
+  ],
+  "competitor_qas": [
+    {
+      "question": "Can I charge two devices at the same time?",
+      "answer": "Yes, it supports simultaneous dual charging via USB-C and USB-A."
+    },
+    {
+      "question": "Is this safe for airplane carry-on?",
+      "answer": "Yes, at 74Wh it's under the FAA 100Wh limit for carry-on lithium batteries."
+    }
+  ],
+  "product_context": {
+    "waterproof_rating": "IPX5",
+    "warranty_months": 18,
+    "charge_hours": 1.5
+  },
+  "images": [
+    {
+      "filename": "main_product.jpg",
+      "image_type": "main",
+      "alt_text": "product image 1",
+      "ocr_text": ""
+    },
+    {
+      "filename": "specs_infographic.jpg",
+      "image_type": "infographic",
+      "alt_text": "Power bank specs showing PD 65W output and 20000mAh capacity",
+      "ocr_text": "PD 65W Output | 20000mAh | IPX5 Water-Resistant | 3 Ports | USB-C + Dual USB-A"
+    },
+    {
+      "filename": "camping_lifestyle.jpg",
+      "image_type": "lifestyle",
+      "alt_text": "Portable power bank used for camping in a forest setting at night",
+      "ocr_text": ""
+    },
+    {
+      "filename": "size_comparison.jpg",
+      "image_type": "infographic",
+      "alt_text": "Size comparison of VoltCharge power bank next to iPhone and MacBook",
+      "ocr_text": "6.3 x 3.1 x 0.9 inches | 450g | Fits in your pocket"
+    }
+  ],
+  "comparison_table": {
+    "Battery Capacity": {"B0EXAMPLE_POWERBANK": "20000mAh", "B0COMP001": "10000mAh", "B0COMP002": "26800mAh"},
+    "USB-C Output": {"B0EXAMPLE_POWERBANK": "65W PD 3.0", "B0COMP001": "18W", "B0COMP002": "30W PD"},
+    "Waterproof Rating": {"B0EXAMPLE_POWERBANK": "IPX5", "B0COMP001": "None", "B0COMP002": "IPX4"},
+    "Weight": {"B0EXAMPLE_POWERBANK": "450g", "B0COMP001": "280g", "B0COMP002": "600g"},
+    "Charging Speed": {"B0EXAMPLE_POWERBANK": "30 min to 50% (MacBook)", "B0COMP001": "2 hours", "B0COMP002": "1.5 hours"},
+    "Number of Ports": {"B0EXAMPLE_POWERBANK": "3 (USB-C + 2xUSB-A)", "B0COMP001": "2", "B0COMP002": "4"}
+  },
+  "modules": [
+    {"type": "comparison_table", "content": "See comparison table above"},
+    {"type": "faq", "content": "Q: Is it waterproof? A: Yes, IPX5 rated. Q: Airplane safe? A: Yes, 74Wh is under 100Wh FAA limit. Q: How fast? A: 65W PD charges MacBook to 50% in 30 min."},
+    {"type": "technical_specs", "content": "Capacity: 20000mAh / 74Wh | Output: 65W USB-C PD + 18W QC + 12W USB-A | Input: 65W USB-C | Weight: 450g | Dimensions: 6.3 x 3.1 x 0.9 in | Material: Aluminum Alloy | Cells: 4x 21700 Li-ion"},
+    {"type": "lifestyle_image", "content": ""}
+  ],
+  "product_claims": [
+    "20000mAh capacity",
+    "65W PD 3.0 fast charging",
+    "IPX5 water-resistant",
+    "Aircraft-grade aluminum",
+    "TSA-approved 74Wh",
+    "MIL-STD-810G drop tested",
+    "18-month warranty",
+    "Charges MacBook to 50% in 30 minutes"
+  ],
+  "videos": [
+    {
+      "title": "Stop struggling with dead batteries while camping \u2014 VoltCharge PowerCore 20000",
+      "description": "Tired of your phone dying mid-hike? Solve your power problem with 20000mAh of portable power. 65W PD charges your MacBook in minutes. Finally enjoy all-day power anywhere you go.",
+      "aspect_ratio": "9:16"
+    },
+    {
+      "title": "VoltCharge PowerCore \u2014 product overview and features",
+      "description": "Check out the features of our 20000mAh portable power bank with 65W USB-C PD fast charging.",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}

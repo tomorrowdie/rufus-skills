@@ -26,8 +26,10 @@
 | 03 | `Skill03` | `reviews` list[dict] | `competitor_qas` list[dict], `product_context` dict, `asin` str | `qa_seeding.qa_pairs` | `scores.grade` |
 | 04 | `Skill04` | `images` list[dict] | `noun_phrases` list[str], `product_name` str, `asin` str | `image_reports` | `scores.grade` |
 | 05 | `Skill05` | *(none required)* | `comparison_table` dict, `modules` list[dict], `product_claims` list[str], `asin` str | `hallucination_risk` | `scores.grade` |
-| 06 | `Skill06` | `title` str | `videos` list[dict], `category` str, `asin` str | `title_analysis` | `scores.grade` |
+| 06 | `Skill06` | `title` str, `bullets` list[str], `images` list[dict], `modules` list[dict] | `videos` list[dict], `category` str, `asin` str | Multiple (8 modules) | `scores.grade` |
 | 07 | `Skill07` | `title` str | `bullets` list[str], `backend_attrs` dict, `negative_review_themes` list[str], `asin` str | `compliance_report` | `scores.grade` |
+| 08 | `Skill08` | (Pending migration) | | | |
+| 09 | `Skill09` | (Pending migration) | | | |
 
 > **Universal output fields present in every skill:** `skill_id` (str), `skill_name` (str), `asin` (str), `scores.grade` (str: A/B/C/D/F)
 
@@ -736,6 +738,26 @@ Numbers followed by units: `mAh`, `Wh`, `W`, `V`, `A`, `kg`, `lbs`, `oz`, `g`, `
 ```json
 {
   "title": "Power Bank 20000mAh Fast Charging USB-C PD 65W — Portable Charger for Camping Travel iPhone Android",
+  "bullets": [
+    "20000mAh high-capacity portable power bank charges iPhone 15 Pro Max 4.5 times",
+    "65W USB-C PD 3.0 fast charging output — charge your MacBook Pro to 50% in just 30 minutes",
+    "IPX5 water-resistant with aircraft-grade aluminum chassis and drop-tested to MIL-STD-810G",
+    "TSA-approved 74Wh battery meets FAA carry-on regulations",
+    "What's in the box: VoltCharge PowerCore 20000, USB-C cable, travel pouch"
+  ],
+  "images": [
+    { "filename": "main_product.jpg", "image_type": "main" },
+    { "filename": "specs_infographic.jpg", "image_type": "infographic" },
+    { "filename": "camping_lifestyle.jpg", "image_type": "lifestyle" },
+    { "filename": "size_comparison.jpg", "image_type": "infographic" },
+    { "filename": "video_thumb_camping.jpg", "image_type": "video_thumb" }
+  ],
+  "modules": [
+    { "type": "comparison_table", "content": "..." },
+    { "type": "faq", "content": "..." },
+    { "type": "technical_specs", "content": "..." },
+    { "type": "lifestyle_image", "content": "..." }
+  ],
   "videos": [
     {
       "title":        "Stop struggling with dead batteries while camping",
@@ -772,6 +794,50 @@ Numbers followed by units: `mAh`, `Wh`, `W`, `V`, `A`, `kg`, `lbs`, `oz`, `g`, `
     "optimized_title_suggestion":  "",
     "title_score":                 90.0
   },
+  "bullet_truncation": {
+    "bullets_analyzed": 5,
+    "truncated_count": 5,
+    "per_bullet": [ ... ],
+    "avg_bullet_score": 82.0
+  },
+  "image_order": {
+    "images_analyzed": 5,
+    "per_slot": [ ... ],
+    "order_score": 40.0,
+    "recommendation": "Reorder images: Slot 1=Main, Slot 2-3=Specs Infographics, Slot 4=Lifestyle."
+  },
+  "swipe_depth": {
+    "first_infographic_at_swipe": 2,
+    "comparison_table_at_position": 6,
+    "spec_reachability_score": 100.0,
+    "comparison_reachability_score": 100.0,
+    "swipe_depth_score": 100.0,
+    "total_images": 5,
+    "total_modules": 4
+  },
+  "aplus_fold": {
+    "has_modules": true,
+    "first_module_type": "comparison_table",
+    "fact_density": 0,
+    "fold_score": 90.0,
+    "recommendation": ""
+  },
+  "touch_targets": {
+    "has_comparison_table": true,
+    "has_video_content": true,
+    "image_count": 5,
+    "issues": [],
+    "touch_target_score": 100.0
+  },
+  "voice_readiness": {
+    "flagged_phrases": [ ... ],
+    "flagged_count": 21,
+    "title_natural_flow": true,
+    "conversational_bullets": 3,
+    "total_bullets": 5,
+    "conversational_ratio": 0.6,
+    "voice_readiness_score": 60.0
+  },
   "video_analysis": [
     {
       "video_title":      "Stop struggling with dead batteries while camping",
@@ -800,8 +866,14 @@ Numbers followed by units: `mAh`, `Wh`, `W`, `V`, `A`, `kg`, `lbs`, `oz`, `g`, `
   ],
   "scores": {
     "title_score":           90.0,
+    "bullet_truncation_score": 82.0,
+    "image_order_score":     40.0,
+    "swipe_depth_score":     100.0,
+    "aplus_fold_score":      90.0,
+    "touch_target_score":    100.0,
+    "voice_readiness_score": 60.0,
     "video_avg_score":       45.0,
-    "composite_mobile_score": 72.0,
+    "composite_mobile_score": 74.9,
     "grade":                 "C"
   }
 }
@@ -814,6 +886,9 @@ Numbers followed by units: `mAh`, `Wh`, `W`, `V`, `A`, `kg`, `lbs`, `oz`, `g`, `
 | Field | Type | ✅/⚙️ | Default if omitted | Notes |
 |-------|------|-------|-------------------|-------|
 | `title` | `str` | ✅ Required | — | Passed through `sanitize_text()`. Must not be empty for meaningful analysis. |
+| `bullets` | `list[str]` | ✅ Required | — | Passed to evaluate `bullet_truncation` and `voice_readiness`. |
+| `images` | `list[dict]` | ✅ Required | — | Evaluates `image_order` and `swipe_depth`. |
+| `modules` | `list[dict]` | ✅ Required | — | Evaluates `aplus_fold` and `touch_targets`. |
 | `videos` | `list[dict]` | ⚙️ Optional | `[]` | When omitted, `video_avg_score` defaults to `50.0` in composite calculation. |
 | `videos[].title` | `str` | ✅ in each video | `""` | Video title. Scanned for problem/solution keywords. |
 | `videos[].description` | `str` | ✅ in each video | `""` | Video description. Combined with title for arc detection. |
@@ -843,6 +918,9 @@ Start at 100 → -30 if filler opener → -25 if no category keyword in first 70
 
 ```
 [ ] title is a non-empty string
+[ ] bullets is a list of strings
+[ ] images is a list of dicts with "filename" and "image_type"
+[ ] modules is a list of dicts with "type" and "content"
 [ ] Title starts with a category keyword (power bank, portable battery, etc.) for best score
 [ ] Title does NOT start with filler words (introducing, new!, best seller, etc.)
 [ ] Title length is ideally 70–120 chars; max 200 chars
@@ -850,6 +928,7 @@ Start at 100 → -30 if filler opener → -25 if no category keyword in first 70
 [ ] aspect_ratio must be exactly "9:16" or "vertical" for vertical scoring
 [ ] Video description must contain problem keywords AND solution keywords for full +40 arc bonus
 [ ] Rufus preview (first 70 chars): skill.to_json()["title_analysis"]["rufus_chat_preview"]
+[ ] All 8 modules evaluated: title_analysis, bullet_truncation, image_order, swipe_depth, aplus_fold, touch_targets, voice_readiness, video_analysis
 [ ] Grade accessed via: skill.to_json()["scores"]["grade"]
 ```
 

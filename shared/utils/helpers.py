@@ -193,17 +193,22 @@ def load_json_input(source: str | dict | Path) -> dict[str, Any]:
     raise ValueError(f"Unsupported source type: {type(source)}")
 
 
-def save_json_output(data: dict | list, output_path: str | Path) -> Path:
+def save_json_output(data: dict | list, output_path: str | Path | None) -> Path | None:
     """
-    Write a JSON-serializable payload to disk, creating parent directories.
+    Write a JSON-serializable payload to disk, creating parent directories,
+    or print to stdout if output_path is None.
 
     Args:
         data:        Dict or list to serialise.
-        output_path: Destination file path.
+        output_path: Destination file path, or None for stdout.
 
     Returns:
-        Resolved Path of the written file.
+        Resolved Path of the written file, or None if printed to stdout.
     """
+    if output_path is None:
+        print(json.dumps(data, ensure_ascii=False, indent=2))
+        return None
+        
     out = Path(output_path)
     out.parent.mkdir(parents=True, exist_ok=True)
     with open(out, "w", encoding="utf-8") as fh:

@@ -1,6 +1,9 @@
 {
   "asin": "B0FKN7X7HM",
-  "product": "Anker Nano Power Bank (5K, MagGo, Slim) — A1665",
+  "product": "Anker Nano Power Bank, Ultra-Slim 5,000mAh Magnetic Wireless Charging Battery, Qi2 Certified 15W Max MagSafe-Compatible ",
+  "market": "us",
+  "category_path": "cell_phones_accessories/accessories/chargers_power_adapters/portable_power_banks",
+  "pipeline_run_at": "2026-03-05T16:13:09.274608+00:00",
   "grades_summary": {
     "skill_01_taxonomy": "A",
     "skill_02_npo": "F",
@@ -244,7 +247,7 @@
         },
         {
           "question": "How long does it take to fully charge?",
-          "answer": "With PD fast charging, a full charge takes approximately 2 hours.",
+          "answer": "With PD fast charging, a full charge takes approximately 2.0 hours.",
           "template_key": "charging_time"
         },
         {
@@ -290,7 +293,7 @@
         "image_type": "main",
         "alt_text": {
           "original": "Anker Nano Power Bank black",
-          "optimized": "Anker Nano Power Bank 5000mAh MagSafe Magsafe power with bank capability for enhanced user experience — clean studio shot showing primary product view on white background",
+          "optimized": "Anker Nano Power Bank Magsafe power with bank capability for enhanced user experience — clean studio shot showing primary product view on white background",
           "score": {
             "is_generic": true,
             "length": 27,
@@ -315,7 +318,7 @@
         "image_type": "infographic",
         "alt_text": {
           "original": "Anker power bank specifications infographic showing 15W Qi2 and 20W USB-C",
-          "optimized": "Anker Nano Power Bank 5000mAh MagSafe Magsafe power with bank capability for enhanced user experience — callout annotations showing technical specifications and key features",
+          "optimized": "Anker Nano Power Bank Magsafe power with bank capability for enhanced user experience — callout annotations showing technical specifications and key features",
           "score": {
             "is_generic": false,
             "length": 73,
@@ -346,7 +349,7 @@
         "image_type": "lifestyle",
         "alt_text": {
           "original": "Person holding iPhone with Anker MagSafe power bank attached on the go",
-          "optimized": "Anker Nano Power Bank 5000mAh MagSafe Magsafe power with bank capability for enhanced user experience — user interacting with product showing product in real-world use environment",
+          "optimized": "Anker Nano Power Bank Magsafe power with bank capability for enhanced user experience — user interacting with product showing product in real-world use environment",
           "score": {
             "is_generic": false,
             "length": 70,
@@ -371,7 +374,7 @@
         "image_type": "infographic",
         "alt_text": {
           "original": "Thermal cooling comparison showing graphene heat dissipation",
-          "optimized": "Anker Nano Power Bank 5000mAh MagSafe Magsafe power with bank capability for enhanced user experience — callout annotations showing technical specifications and key features",
+          "optimized": "Anker Nano Power Bank Magsafe power with bank capability for enhanced user experience — callout annotations showing technical specifications and key features",
           "score": {
             "is_generic": false,
             "length": 60,
@@ -402,7 +405,7 @@
         "image_type": "infographic",
         "alt_text": {
           "original": "Compatible iPhone models list",
-          "optimized": "Anker Nano Power Bank 5000mAh MagSafe Magsafe power with bank capability for enhanced user experience — callout annotations showing technical specifications and key features",
+          "optimized": "Anker Nano Power Bank Magsafe power with bank capability for enhanced user experience — callout annotations showing technical specifications and key features",
           "score": {
             "is_generic": true,
             "length": 29,
